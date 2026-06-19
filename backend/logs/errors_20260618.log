@@ -1,0 +1,42 @@
+2026-06-18 15:26:21 - app.auth_routes - ERROR - [auth_routes.py:26] - register() - Error during register_user: Email already registered
+2026-06-18 15:30:51 - app.auth_routes - ERROR - [auth_routes.py:26] - register() - Error during register_user: Email already registered
+2026-06-18 19:15:02 - app.report_routes - ERROR - [report_routes.py:65] - monthly_revenue() - Monthly revenue fetch failed: ORA-00904: "P"."CREATED_AT": invalid identifier
+Help: https://docs.oracle.com/error-help/db/ora-00904/
+2026-06-18 19:15:58 - app.report_routes - ERROR - [report_routes.py:101] - payment_summary() - Payment summary fetch failed: ORA-00923: FROM keyword not found where expected
+Help: https://docs.oracle.com/error-help/db/ora-00923/
+2026-06-18 19:18:28 - app.report_routes - ERROR - [report_routes.py:65] - monthly_revenue() - Monthly revenue fetch failed: ORA-00904: "P"."CREATED_AT": invalid identifier
+Help: https://docs.oracle.com/error-help/db/ora-00904/
+2026-06-18 19:18:54 - app.report_routes - ERROR - [report_routes.py:101] - payment_summary() - Payment summary fetch failed: ORA-00923: FROM keyword not found where expected
+Help: https://docs.oracle.com/error-help/db/ora-00923/
+2026-06-18 19:23:40 - app.report_repository - ERROR - [report_repository.py:67] - get_monthly_revenue() - Monthly revenue SQL Error
+Traceback (most recent call last):
+  File "C:\wipro_labs\CapstoneProject\Ecommerce_Platform\backend\app\repositories\report_repository.py", line 62, in get_monthly_revenue
+    cursor.execute(query)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\wipro_labs\CapstoneProject\Ecommerce_Platform\backend\venv\Lib\site-packages\oracledb\cursor.py", line 859, in execute
+    impl.execute(self)
+    ~~~~~~~~~~~~^^^^^^
+  File "src/oracledb/impl/thick/cursor.pyx", line 337, in oracledb.thick_impl.ThickCursorImpl.execute
+  File "src/oracledb/impl/thick/utils.pyx", line 486, in oracledb.thick_impl._raise_from_odpi
+  File "src/oracledb/impl/thick/utils.pyx", line 476, in oracledb.thick_impl._raise_from_info
+oracledb.exceptions.DatabaseError: ORA-00904: "P"."CREATED_AT": invalid identifier
+Help: https://docs.oracle.com/error-help/db/ora-00904/
+2026-06-18 19:23:40 - app.report_routes - ERROR - [report_routes.py:65] - monthly_revenue() - Monthly revenue fetch failed: ORA-00904: "P"."CREATED_AT": invalid identifier
+Help: https://docs.oracle.com/error-help/db/ora-00904/
+2026-06-18 19:46:47 - app.report_repository - ERROR - [report_repository.py:109] - get_payment_summary() - Payment summary SQL Error
+Traceback (most recent call last):
+  File "C:\wipro_labs\CapstoneProject\Ecommerce_Platform\backend\app\repositories\report_repository.py", line 104, in get_payment_summary
+    cursor.execute(query)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\wipro_labs\CapstoneProject\Ecommerce_Platform\backend\venv\Lib\site-packages\oracledb\cursor.py", line 859, in execute
+    impl.execute(self)
+    ~~~~~~~~~~~~^^^^^^
+  File "src/oracledb/impl/thick/cursor.pyx", line 337, in oracledb.thick_impl.ThickCursorImpl.execute
+  File "src/oracledb/impl/thick/utils.pyx", line 486, in oracledb.thick_impl._raise_from_odpi
+  File "src/oracledb/impl/thick/utils.pyx", line 476, in oracledb.thick_impl._raise_from_info
+oracledb.exceptions.DatabaseError: ORA-00923: FROM keyword not found where expected
+Help: https://docs.oracle.com/error-help/db/ora-00923/
+2026-06-18 19:46:47 - app.report_routes - ERROR - [report_routes.py:101] - payment_summary() - Payment summary fetch failed: ORA-00923: FROM keyword not found where expected
+Help: https://docs.oracle.com/error-help/db/ora-00923/
+2026-06-18 20:19:13 - app.ai_service - ERROR - [ai_service.py:220] - search_products() - Error searching products: ORA-01008: value for bind variable placeholder :MAX_PRICE (position 1) was not provided
+Help: https://docs.oracle.com/error-help/db/ora-01008/

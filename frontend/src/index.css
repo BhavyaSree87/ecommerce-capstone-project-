@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { @apply bg-white text-gray-800 antialiased; }
+
+.transition-smooth { transition: all 200ms ease-in-out; }

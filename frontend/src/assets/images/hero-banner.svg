@@ -1,0 +1,18 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#e879f9" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <circle cx="350" cy="420" r="210" fill="#ffffff" opacity="0.15" />
+  <circle cx="850" cy="200" r="180" fill="#ffffff" opacity="0.12" />
+  <g transform="translate(220 220)">
+    <rect x="0" y="0" width="360" height="420" rx="24" fill="#f8fafc" />
+    <rect x="40" y="40" width="280" height="220" rx="18" fill="#ecd4ff" />
+    <rect x="60" y="280" width="220" height="28" rx="14" fill="#a78bfa" />
+    <rect x="60" y="320" width="160" height="24" rx="12" fill="#d8b4fe" />
+  </g>
+  <text x="60" y="700" fill="#fff" font-size="80" font-family="Inter, sans-serif" font-weight="700">Fashion for Every Mood</text>
+</svg>

@@ -1,0 +1,658 @@
+2026-06-18 00:29:20 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 00:29:20 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 00:29:24 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 00:29:24 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 00:31:02 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 00:31:02 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 00:31:05 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 00:31:05 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 00:40:13 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 00:40:13 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 00:40:54 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 00:40:54 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 00:59:42 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 00:59:42 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 00:59:45 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 00:59:45 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:02:20 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:02:20 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:02:22 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:02:22 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:06:09 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:06:09 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:06:09 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:06:09 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:06:26 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:06:26 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:06:27 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:06:27 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:06:34 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:06:34 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:06:36 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:06:36 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:07:11 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:07:11 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:07:12 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:07:12 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:08:10 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:08:10 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:08:11 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:08:11 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:09:05 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:09:05 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:09:07 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:09:07 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:09:36 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:09:36 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:09:36 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:09:36 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:09:42 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:09:42 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:09:42 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:09:42 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:10:06 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:10:06 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:10:08 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:10:08 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:11:30 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:11:30 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 01:11:34 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 01:11:34 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:30:43 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:30:43 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:31:06 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:31:06 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:31:26 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:31:26 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:31:30 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:31:30 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:32:04 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:32:04 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:32:05 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:32:05 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:37:33 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:37:33 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:37:44 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:37:44 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:37:46 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:37:46 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:37:59 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:37:59 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:37:59 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:37:59 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:38:08 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:38:08 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:38:10 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:38:10 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:38:10 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:38:10 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:38:47 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:38:47 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:38:47 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:38:47 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:39:02 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:39:02 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:39:03 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:39:03 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:39:24 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:39:24 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:39:24 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:39:24 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:39:38 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:39:38 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:39:39 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:39:39 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:39:47 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:39:47 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:40:20 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:40:20 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:40:21 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:40:21 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:40:27 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:40:27 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:40:27 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:40:27 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:40:28 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:40:28 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:41:07 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:41:07 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:41:11 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:41:11 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:41:18 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:41:18 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:41:49 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:41:49 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:41:49 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:41:49 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:41:51 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:41:51 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:43:46 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:43:46 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:43:48 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:43:48 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:43:56 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:43:56 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:43:57 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:43:57 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:45:51 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:45:51 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:46:31 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:46:31 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:46:34 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:46:34 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:48:41 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:48:41 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:51:22 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:51:22 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:52:20 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:52:20 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:53:18 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:53:18 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 09:54:26 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 09:54:26 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:11:03 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:11:03 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:13:01 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:13:01 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:17:02 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:17:02 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:17:51 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:17:51 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:18:12 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:18:12 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:19:06 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:19:06 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:22:19 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:22:19 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:23:26 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:23:27 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:30:09 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:30:09 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:30:48 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:30:48 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:31:45 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:31:45 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:32:48 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:32:48 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 10:33:41 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 10:33:41 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:07:00 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:07:00 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:08:45 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:08:45 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:09:21 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:09:21 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:11:25 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:11:25 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:11:59 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:11:59 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:12:50 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:12:50 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:13:41 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:13:41 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:14:06 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:14:06 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:14:45 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:14:45 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:15:23 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:15:23 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:15:46 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:15:46 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:16:54 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:16:54 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:18:02 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:18:02 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:18:34 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:18:34 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:19:06 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:19:06 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:19:40 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:19:40 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:20:02 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:20:02 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:24:16 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:24:16 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:24:55 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:24:55 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:25:37 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:25:37 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:28:21 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:28:21 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:28:23 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:28:23 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:29:58 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:29:58 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:30:01 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 12:30:01 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 12:32:50 - app.auth_dependency - WARNING - [auth_dependency.py:24] - get_token_from_header() - Missing authorization header
+2026-06-18 13:01:59 - app.auth_dependency - WARNING - [auth_dependency.py:24] - get_token_from_header() - Missing authorization header
+2026-06-18 13:03:39 - app.auth_dependency - WARNING - [auth_dependency.py:24] - get_token_from_header() - Missing authorization header
+2026-06-18 13:04:11 - app.auth_dependency - WARNING - [auth_dependency.py:24] - get_token_from_header() - Missing authorization header
+2026-06-18 13:04:26 - app.auth_dependency - WARNING - [auth_dependency.py:24] - get_token_from_header() - Missing authorization header
+2026-06-18 13:06:32 - app.auth_dependency - WARNING - [auth_dependency.py:24] - get_token_from_header() - Missing authorization header
+2026-06-18 13:12:47 - app.auth_dependency - WARNING - [auth_dependency.py:24] - get_token_from_header() - Missing authorization header
+2026-06-18 13:16:19 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:16:20 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:16:41 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:16:42 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:17:11 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:17:11 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:17:15 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:17:15 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:17:32 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:17:32 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:17:34 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:17:34 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:17:56 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:17:56 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:17:59 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:17:59 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:18:23 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:18:23 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:18:24 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:18:24 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:18:41 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:18:41 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:19:10 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:19:10 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:20:10 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:20:10 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:20:10 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:20:10 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:32:42 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:32:42 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:33:46 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 13:33:46 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 13:33:47 - app.auth_routes - INFO - [auth_routes.py:45] - register() - User 33 registered and authenticated successfully
+2026-06-18 13:39:32 - app.auth_routes - INFO - [auth_routes.py:100] - login() - User 32 logged in successfully
+2026-06-18 13:44:09 - app.auth_routes - INFO - [auth_routes.py:100] - login() - User 32 logged in successfully
+2026-06-18 14:24:11 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:24:11 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:27:08 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:27:08 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:31:16 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:31:16 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:31:17 - app.auth_routes - INFO - [auth_routes.py:150] - login() - User 42 logged in successfully
+2026-06-18 14:47:15 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:47:15 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:47:55 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:47:55 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:48:49 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:48:49 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:49:44 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:49:44 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:50:40 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:50:40 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:51:18 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:51:18 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:51:19 - app.auth_routes - INFO - [auth_routes.py:46] - register() - User 34 registered and authenticated successfully
+2026-06-18 14:51:36 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 14:51:36 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 14:51:37 - app.auth_routes - INFO - [auth_routes.py:150] - login() - User 42 logged in successfully
+2026-06-18 15:03:18 - app.auth_routes - INFO - [auth_routes.py:150] - login() - User 32 logged in successfully
+2026-06-18 15:05:09 - app.auth_routes - WARNING - [auth_routes.py:82] - token() - Token request failed for user: bhavya123456@gmai.com
+2026-06-18 15:11:32 - app.auth_dependency - WARNING - [auth_dependency.py:69] - admin_only() - Non-admin user 32 attempted admin action
+2026-06-18 15:26:21 - app.auth_routes - ERROR - [auth_routes.py:26] - register() - Error during register_user: Email already registered
+2026-06-18 15:28:42 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 15:28:42 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 15:30:51 - app.auth_routes - ERROR - [auth_routes.py:26] - register() - Error during register_user: Email already registered
+2026-06-18 15:35:08 - app.auth_routes - WARNING - [auth_routes.py:82] - token() - Token request failed for user: admin_jwt_test@example.com
+2026-06-18 15:41:30 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 15:41:30 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 15:43:11 - app.auth_routes - WARNING - [auth_routes.py:82] - token() - Token request failed for user: admin_jwt_test@example.com
+2026-06-18 16:04:05 - app.auth_routes - INFO - [auth_routes.py:150] - login() - User 42 logged in successfully
+2026-06-18 16:26:35 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 16:26:35 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 16:30:06 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 16:30:07 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 16:30:28 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 16:30:28 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 16:30:33 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 16:30:33 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 16:30:35 - app.auth_routes - INFO - [auth_routes.py:150] - login() - User 42 logged in successfully
+2026-06-18 16:30:59 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 16:30:59 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 16:31:01 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 16:31:01 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 16:53:57 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 16:53:57 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 16:56:09 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 16:56:09 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 17:14:32 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 17:14:32 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 17:20:29 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 17:20:29 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 17:20:41 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 17:20:41 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 17:20:48 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 17:20:48 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 17:20:55 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 17:20:55 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 17:21:00 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 17:21:00 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 17:21:50 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 17:21:50 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 17:21:53 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 17:21:53 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 17:54:55 - app.order_routes - INFO - [order_routes.py:101] - create_order() - Order 31 created for user 42 with 1 items
+2026-06-18 17:56:46 - app.order_routes - INFO - [order_routes.py:101] - create_order() - Order 33 created for user 42 with 1 items
+2026-06-18 17:59:07 - app.order_routes - INFO - [order_routes.py:263] - update_order_status() - Order 33 status changed from Order Placed to OrderStatusEnum.CANCELLED
+2026-06-18 18:07:06 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:07:07 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:07:32 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:07:32 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:08:33 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:08:33 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:09:21 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:09:21 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:17:27 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:17:27 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:18:45 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:18:45 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:18:54 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:18:54 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:19:06 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:19:06 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:19:57 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:19:57 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:20:04 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:20:04 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:20:10 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:20:10 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:21:47 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:21:47 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:22:03 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:22:04 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:42:40 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:42:40 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:42:42 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:42:42 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:47:13 - app.exceptions - WARNING - [exceptions.py:20] - __init__() - Validation error: Inventory record already exists for product 1 (code: VALIDATION_ERROR)
+2026-06-18 18:48:22 - app.inventory_service - INFO - [inventory_service.py:60] - update_inventory_record() - Inventory updated for product 1
+2026-06-18 18:53:16 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:53:16 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:53:20 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:53:20 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:53:27 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:53:27 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:54:17 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:54:17 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 18:57:04 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 18:57:04 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:14:30 - app.report_routes - INFO - [report_routes.py:24] - dashboard_report() - Dashboard analytics fetched successfully
+2026-06-18 19:14:47 - app.report_routes - INFO - [report_routes.py:42] - top_selling_products() - Top-selling products fetched successfully
+2026-06-18 19:15:02 - app.report_routes - ERROR - [report_routes.py:65] - monthly_revenue() - Monthly revenue fetch failed: ORA-00904: "P"."CREATED_AT": invalid identifier
+Help: https://docs.oracle.com/error-help/db/ora-00904/
+2026-06-18 19:15:13 - app.report_routes - INFO - [report_routes.py:42] - top_selling_products() - Top-selling products fetched successfully
+2026-06-18 19:15:45 - app.report_routes - INFO - [report_routes.py:78] - low_stock_report() - Low stock report fetched successfully
+2026-06-18 19:15:58 - app.report_routes - ERROR - [report_routes.py:101] - payment_summary() - Payment summary fetch failed: ORA-00923: FROM keyword not found where expected
+Help: https://docs.oracle.com/error-help/db/ora-00923/
+2026-06-18 19:18:28 - app.report_routes - ERROR - [report_routes.py:65] - monthly_revenue() - Monthly revenue fetch failed: ORA-00904: "P"."CREATED_AT": invalid identifier
+Help: https://docs.oracle.com/error-help/db/ora-00904/
+2026-06-18 19:18:54 - app.report_routes - ERROR - [report_routes.py:101] - payment_summary() - Payment summary fetch failed: ORA-00923: FROM keyword not found where expected
+Help: https://docs.oracle.com/error-help/db/ora-00923/
+2026-06-18 19:21:51 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:21:51 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:22:01 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:22:01 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:22:56 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:22:56 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:22:58 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:22:58 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:23:40 - app.report_repository - INFO - [report_repository.py:59] - get_monthly_revenue() - Executing monthly revenue query
+2026-06-18 19:23:40 - app.report_repository - INFO - [report_repository.py:60] - get_monthly_revenue() - SQL: 
+        SELECT TO_CHAR(TRUNC(p.CREATED_AT, 'MM'), 'YYYY-MM') AS MONTH, NVL(SUM(p.AMOUNT), 0) AS REVENUE
+        FROM PAYMENTS p
+        WHERE p.PAYMENT_STATUS = 'SUCCESS'
+        GROUP BY TO_CHAR(TRUNC(p.CREATED_AT, 'MM'), 'YYYY-MM')
+        ORDER BY TO_CHAR(TRUNC(p.CREATED_AT, 'MM'), 'YYYY-MM')
+        
+2026-06-18 19:23:40 - app.report_repository - ERROR - [report_repository.py:67] - get_monthly_revenue() - Monthly revenue SQL Error
+Traceback (most recent call last):
+  File "C:\wipro_labs\CapstoneProject\Ecommerce_Platform\backend\app\repositories\report_repository.py", line 62, in get_monthly_revenue
+    cursor.execute(query)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\wipro_labs\CapstoneProject\Ecommerce_Platform\backend\venv\Lib\site-packages\oracledb\cursor.py", line 859, in execute
+    impl.execute(self)
+    ~~~~~~~~~~~~^^^^^^
+  File "src/oracledb/impl/thick/cursor.pyx", line 337, in oracledb.thick_impl.ThickCursorImpl.execute
+  File "src/oracledb/impl/thick/utils.pyx", line 486, in oracledb.thick_impl._raise_from_odpi
+  File "src/oracledb/impl/thick/utils.pyx", line 476, in oracledb.thick_impl._raise_from_info
+oracledb.exceptions.DatabaseError: ORA-00904: "P"."CREATED_AT": invalid identifier
+Help: https://docs.oracle.com/error-help/db/ora-00904/
+2026-06-18 19:23:40 - app.report_routes - ERROR - [report_routes.py:65] - monthly_revenue() - Monthly revenue fetch failed: ORA-00904: "P"."CREATED_AT": invalid identifier
+Help: https://docs.oracle.com/error-help/db/ora-00904/
+2026-06-18 19:28:13 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:28:13 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:28:19 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:28:19 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:29:54 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:29:54 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:29:56 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:29:56 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:31:58 - app.auth_routes - WARNING - [auth_routes.py:82] - token() - Token request failed for user: Admin
+2026-06-18 19:32:27 - app.auth_routes - WARNING - [auth_routes.py:82] - token() - Token request failed for user: Admin Test
+2026-06-18 19:34:17 - app.auth_routes - WARNING - [auth_routes.py:117] - login() - Login attempt failed: user with email admin123456@example.com not found
+2026-06-18 19:34:34 - app.auth_routes - WARNING - [auth_routes.py:117] - login() - Login attempt failed: user with email bhavya123456@example.com not found
+2026-06-18 19:38:10 - app.auth_routes - INFO - [auth_routes.py:150] - login() - User 42 logged in successfully
+2026-06-18 19:39:53 - app.report_repository - INFO - [report_repository.py:60] - get_monthly_revenue() - Executing monthly revenue query
+2026-06-18 19:39:53 - app.report_repository - INFO - [report_repository.py:61] - get_monthly_revenue() - SQL: 
+        SELECT TO_CHAR(TRUNC(o.CREATED_AT, 'MM'), 'YYYY-MM') AS MONTH, NVL(SUM(p.AMOUNT), 0) AS REVENUE
+        FROM PAYMENTS p
+        JOIN ORDERS o ON p.ORDER_ID = o.ORDER_ID
+        WHERE p.PAYMENT_STATUS = 'SUCCESS'
+        GROUP BY TRUNC(o.CREATED_AT, 'MM')
+        ORDER BY TRUNC(o.CREATED_AT, 'MM')
+        
+2026-06-18 19:39:53 - app.report_repository - INFO - [report_repository.py:65] - get_monthly_revenue() - Monthly revenue query completed: 0 rows
+2026-06-18 19:39:53 - app.report_routes - INFO - [report_routes.py:60] - monthly_revenue() - Monthly revenue fetched successfully
+2026-06-18 19:40:10 - app.report_repository - INFO - [report_repository.py:100] - get_payment_summary() - Executing payment summary query
+2026-06-18 19:40:10 - app.report_repository - INFO - [report_repository.py:101] - get_payment_summary() - SQL: 
+        SELECT
+            COUNT(*) AS TOTAL_PAYMENTS,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS = 'SUCCESS' THEN 1 ELSE 0 END), 0) AS SUCCESSFUL_PAYMENTS,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS = 'FAILED' THEN 1 ELSE 0 END), 0) AS FAILED_PAYMENTS,
+            NVL(SUM(AMOUNT), 0) AS TOTAL_AMOUNT
+        FROM PAYMENTS
+        
+2026-06-18 19:40:10 - app.report_repository - INFO - [report_repository.py:105] - get_payment_summary() - Payment summary query completed: (6, 1, 0, 155039.95)
+2026-06-18 19:40:10 - app.report_routes - INFO - [report_routes.py:96] - payment_summary() - Payment summary fetched successfully
+2026-06-18 19:43:00 - app.report_repository - INFO - [report_repository.py:100] - get_payment_summary() - Executing payment summary query
+2026-06-18 19:43:00 - app.report_repository - INFO - [report_repository.py:101] - get_payment_summary() - SQL: 
+        SELECT
+            COUNT(*) AS TOTAL_PAYMENTS,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS = 'SUCCESS' THEN 1 ELSE 0 END), 0) AS SUCCESSFUL_PAYMENTS,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS = 'FAILED' THEN 1 ELSE 0 END), 0) AS FAILED_PAYMENTS,
+            NVL(SUM(AMOUNT), 0) AS TOTAL_AMOUNT
+        FROM PAYMENTS
+        
+2026-06-18 19:43:00 - app.report_repository - INFO - [report_repository.py:105] - get_payment_summary() - Payment summary query completed: (6, 1, 0, 155039.95)
+2026-06-18 19:43:00 - app.report_routes - INFO - [report_routes.py:96] - payment_summary() - Payment summary fetched successfully
+2026-06-18 19:43:04 - app.report_repository - INFO - [report_repository.py:60] - get_monthly_revenue() - Executing monthly revenue query
+2026-06-18 19:43:04 - app.report_repository - INFO - [report_repository.py:61] - get_monthly_revenue() - SQL: 
+        SELECT TO_CHAR(TRUNC(o.CREATED_AT, 'MM'), 'YYYY-MM') AS MONTH, NVL(SUM(p.AMOUNT), 0) AS REVENUE
+        FROM PAYMENTS p
+        JOIN ORDERS o ON p.ORDER_ID = o.ORDER_ID
+        WHERE p.PAYMENT_STATUS = 'SUCCESS'
+        GROUP BY TRUNC(o.CREATED_AT, 'MM')
+        ORDER BY TRUNC(o.CREATED_AT, 'MM')
+        
+2026-06-18 19:43:04 - app.report_repository - INFO - [report_repository.py:65] - get_monthly_revenue() - Monthly revenue query completed: 0 rows
+2026-06-18 19:43:04 - app.report_routes - INFO - [report_routes.py:60] - monthly_revenue() - Monthly revenue fetched successfully
+2026-06-18 19:45:09 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:45:09 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:45:37 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:45:37 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:46:37 - app.report_repository - INFO - [report_repository.py:60] - get_monthly_revenue() - Executing monthly revenue query
+2026-06-18 19:46:37 - app.report_repository - INFO - [report_repository.py:61] - get_monthly_revenue() - SQL: 
+        SELECT TO_CHAR(TRUNC(o.CREATED_AT, 'MM'), 'YYYY-MM') AS MONTH, NVL(SUM(p.AMOUNT), 0) AS REVENUE
+        FROM PAYMENTS p
+        JOIN ORDERS o ON p.ORDER_ID = o.ORDER_ID
+        WHERE p.PAYMENT_STATUS = 'SUCCESS'
+        GROUP BY TRUNC(o.CREATED_AT, 'MM')
+        ORDER BY TRUNC(o.CREATED_AT, 'MM')
+        
+2026-06-18 19:46:37 - app.report_repository - INFO - [report_repository.py:65] - get_monthly_revenue() - Monthly revenue query completed: 0 rows
+2026-06-18 19:46:37 - app.report_routes - INFO - [report_routes.py:60] - monthly_revenue() - Monthly revenue fetched successfully
+2026-06-18 19:46:47 - app.report_repository - INFO - [report_repository.py:101] - get_payment_summary() - Executing payment summary query
+2026-06-18 19:46:47 - app.report_repository - INFO - [report_repository.py:102] - get_payment_summary() - SQL: 
+        SELECT
+            COUNT(*) AS TOTAL_PAYMENTS,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS IN ('SUCCESS', 'PAID') THEN 1 ELSE 0 END), 0) AS SUCCESSFUL,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS = 'PENDING' THEN 1 ELSE 0 END), 0) AS PENDING,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS = 'FAILED' THEN 1 ELSE 0 END), 0) AS FAILED,
+            NVL(SUM(AMOUNT), 0) AS TOTAL_AMOUNT
+        FROM PAYMENTS
+        
+2026-06-18 19:46:47 - app.report_repository - ERROR - [report_repository.py:109] - get_payment_summary() - Payment summary SQL Error
+Traceback (most recent call last):
+  File "C:\wipro_labs\CapstoneProject\Ecommerce_Platform\backend\app\repositories\report_repository.py", line 104, in get_payment_summary
+    cursor.execute(query)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\wipro_labs\CapstoneProject\Ecommerce_Platform\backend\venv\Lib\site-packages\oracledb\cursor.py", line 859, in execute
+    impl.execute(self)
+    ~~~~~~~~~~~~^^^^^^
+  File "src/oracledb/impl/thick/cursor.pyx", line 337, in oracledb.thick_impl.ThickCursorImpl.execute
+  File "src/oracledb/impl/thick/utils.pyx", line 486, in oracledb.thick_impl._raise_from_odpi
+  File "src/oracledb/impl/thick/utils.pyx", line 476, in oracledb.thick_impl._raise_from_info
+oracledb.exceptions.DatabaseError: ORA-00923: FROM keyword not found where expected
+Help: https://docs.oracle.com/error-help/db/ora-00923/
+2026-06-18 19:46:47 - app.report_routes - ERROR - [report_routes.py:101] - payment_summary() - Payment summary fetch failed: ORA-00923: FROM keyword not found where expected
+Help: https://docs.oracle.com/error-help/db/ora-00923/
+2026-06-18 19:49:57 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:49:57 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:51:46 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:51:46 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:52:41 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:52:41 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:52:44 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 19:52:44 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 19:53:15 - app.report_repository - INFO - [report_repository.py:60] - get_monthly_revenue() - Executing monthly revenue query
+2026-06-18 19:53:15 - app.report_repository - INFO - [report_repository.py:61] - get_monthly_revenue() - SQL: 
+        SELECT TO_CHAR(TRUNC(o.CREATED_AT, 'MM'), 'YYYY-MM') AS MONTH, NVL(SUM(p.AMOUNT), 0) AS REVENUE
+        FROM PAYMENTS p
+        JOIN ORDERS o ON p.ORDER_ID = o.ORDER_ID
+        WHERE p.PAYMENT_STATUS = 'SUCCESS'
+        GROUP BY TRUNC(o.CREATED_AT, 'MM')
+        ORDER BY TRUNC(o.CREATED_AT, 'MM')
+        
+2026-06-18 19:53:15 - app.report_repository - INFO - [report_repository.py:65] - get_monthly_revenue() - Monthly revenue query completed: 0 rows
+2026-06-18 19:53:15 - app.report_routes - INFO - [report_routes.py:60] - monthly_revenue() - Monthly revenue fetched successfully
+2026-06-18 19:53:27 - app.report_repository - INFO - [report_repository.py:101] - get_payment_summary() - Executing payment summary query
+2026-06-18 19:53:27 - app.report_repository - INFO - [report_repository.py:102] - get_payment_summary() - SQL: 
+        SELECT
+            COUNT(*) TOTAL_PAYMENTS,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS IN ('SUCCESS', 'PAID') THEN 1 ELSE 0 END), 0) SUCCESSFUL_PAYMENTS,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS = 'PENDING' THEN 1 ELSE 0 END), 0) PENDING_PAYMENTS,
+            NVL(SUM(CASE WHEN PAYMENT_STATUS = 'FAILED' THEN 1 ELSE 0 END), 0) FAILED_PAYMENTS,
+            NVL(SUM(AMOUNT), 0) TOTAL_AMOUNT
+        FROM PAYMENTS
+        
+2026-06-18 19:53:27 - app.report_repository - INFO - [report_repository.py:106] - get_payment_summary() - Payment summary query completed: (6, 5, 1, 0, 155039.95)
+2026-06-18 19:53:27 - app.report_routes - INFO - [report_routes.py:96] - payment_summary() - Payment summary fetched successfully
+2026-06-18 20:02:38 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:02:38 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:03:50 - app.report_repository - INFO - [report_repository.py:61] - get_monthly_revenue() - Executing monthly revenue query
+2026-06-18 20:03:50 - app.report_repository - INFO - [report_repository.py:62] - get_monthly_revenue() - SQL: 
+        SELECT TO_CHAR(TRUNC(o.CREATED_AT, 'MM'), 'YYYY-MM') AS MONTH, NVL(SUM(p.AMOUNT), 0) AS REVENUE
+        FROM PAYMENTS p
+        LEFT JOIN ORDERS o ON p.ORDER_ID = o.ORDER_ID
+        WHERE p.PAYMENT_STATUS = 'SUCCESS'
+          AND o.ORDER_ID IS NOT NULL
+        GROUP BY TRUNC(o.CREATED_AT, 'MM')
+        ORDER BY TRUNC(o.CREATED_AT, 'MM')
+        
+2026-06-18 20:03:50 - app.report_repository - INFO - [report_repository.py:66] - get_monthly_revenue() - Monthly revenue query completed: 0 rows
+2026-06-18 20:03:50 - app.report_routes - INFO - [report_routes.py:60] - monthly_revenue() - Monthly revenue fetched successfully
+2026-06-18 20:04:56 - app.report_repository - INFO - [report_repository.py:61] - get_monthly_revenue() - Executing monthly revenue query
+2026-06-18 20:04:56 - app.report_repository - INFO - [report_repository.py:62] - get_monthly_revenue() - SQL: 
+        SELECT TO_CHAR(TRUNC(o.CREATED_AT, 'MM'), 'YYYY-MM') AS MONTH, NVL(SUM(p.AMOUNT), 0) AS REVENUE
+        FROM PAYMENTS p
+        LEFT JOIN ORDERS o ON p.ORDER_ID = o.ORDER_ID
+        WHERE p.PAYMENT_STATUS = 'SUCCESS'
+          AND o.ORDER_ID IS NOT NULL
+        GROUP BY TRUNC(o.CREATED_AT, 'MM')
+        ORDER BY TRUNC(o.CREATED_AT, 'MM')
+        
+2026-06-18 20:04:56 - app.report_repository - INFO - [report_repository.py:66] - get_monthly_revenue() - Monthly revenue query completed: 0 rows
+2026-06-18 20:04:56 - app.report_routes - INFO - [report_routes.py:60] - monthly_revenue() - Monthly revenue fetched successfully
+2026-06-18 20:10:01 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:10:01 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:11:19 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:11:19 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:11:41 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:11:41 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:11:46 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:11:46 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:11:53 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:11:53 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:11:57 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:11:57 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:13:00 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:13:00 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:13:15 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:13:15 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:13:32 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:13:32 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:13:45 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:13:45 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:15:14 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:15:14 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:15:24 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:15:24 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:15:30 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:15:30 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:15:37 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:15:37 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:15:51 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:15:51 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:16:30 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:16:30 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:16:32 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 20:16:32 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 20:18:30 - app.dashboard_routes - INFO - [dashboard_routes.py:38] - dashboard_stats() - Dashboard stats retrieved successfully
+2026-06-18 20:18:53 - app.ai_routes - INFO - [ai_routes.py:44] - generate_description() - Generating description for Wireless Headphones
+2026-06-18 20:18:53 - app.ai_service - INFO - [ai_service.py:85] - generate_description_template() - Generated template description for Wireless Headphones in Electronics
+2026-06-18 20:18:53 - app.ai_routes - INFO - [ai_routes.py:52] - generate_description() - Description generated successfully for Wireless Headphones
+2026-06-18 20:19:13 - app.ai_routes - INFO - [ai_routes.py:86] - shopping_assistant_endpoint() - Processing shopping query: Suggest best phone under 50000
+2026-06-18 20:19:13 - app.ai_service - INFO - [ai_service.py:169] - parse_shopping_query() - Parsed query: {'product_type': 'phone', 'max_price': 50000, 'min_price': 0, 'category': 'Electronics', 'search_keywords': ['phone', '50000']}
+2026-06-18 20:19:13 - app.ai_service - ERROR - [ai_service.py:220] - search_products() - Error searching products: ORA-01008: value for bind variable placeholder :MAX_PRICE (position 1) was not provided
+Help: https://docs.oracle.com/error-help/db/ora-01008/
+2026-06-18 20:19:13 - app.ai_routes - INFO - [ai_routes.py:90] - shopping_assistant_endpoint() - Shopping assistant response generated
+2026-06-18 20:19:38 - app.ai_routes - INFO - [ai_routes.py:121] - product_search() - Processing RAG search query: gaming laptop
+2026-06-18 20:19:38 - app.ai_service - INFO - [ai_service.py:404] - rag_product_search() - RAG search for 'gaming laptop' found 0 results
+2026-06-18 20:19:38 - app.ai_routes - INFO - [ai_routes.py:141] - product_search() - RAG search returned 0 results
+2026-06-18 22:37:17 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:37:17 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:37:19 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:37:19 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:42:57 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:42:57 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:43:00 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:43:00 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:44:21 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:44:21 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:44:28 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:44:28 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:44:59 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:44:59 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:45:57 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:45:57 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:46:00 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:46:00 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:54:57 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:54:57 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 22:54:59 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 22:54:59 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 23:29:31 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 23:29:31 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 23:29:34 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 23:29:34 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 23:37:03 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 23:37:03 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 23:37:06 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 23:37:06 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 23:51:22 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 23:51:22 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized
+2026-06-18 23:51:27 - app.database - INFO - [db.py:12] - <module>() - Oracle client initialized successfully
+2026-06-18 23:51:28 - app.database - INFO - [db.py:53] - <module>() - Oracle database module initialized

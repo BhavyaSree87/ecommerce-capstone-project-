@@ -1,0 +1,6 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" rx="30" fill="#d8fdf7" />
+  <ellipse cx="180" cy="180" rx="90" ry="110" fill="#22c55e" opacity="0.9" />
+  <path d="M340 120 h150 v140 h-150 z" fill="#38bdf8" opacity="0.85" />
+  <text x="330" y="250" fill="#fff" font-family="Inter, sans-serif" font-size="40" font-weight="700">Kids</text>
+</svg>

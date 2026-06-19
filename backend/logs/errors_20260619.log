@@ -1,0 +1,3 @@
+2026-06-19 11:03:40 - app.ai_service - ERROR - [ai_service.py:209] - search_products() - Error searching products: ORA-01008: value for bind variable placeholder :MAX_PRICE (position 1) was not provided
+Help: https://docs.oracle.com/error-help/db/ora-01008/
+2026-06-19 16:25:05 - app.auth_routes - ERROR - [auth_routes.py:26] - register() - Error during register_user: Email already registered
