@@ -1,16 +1,8 @@
--- =============================================
--- REALISTIC PRODUCT DATA - PRODUCTION READY
--- =============================================
--- 100+ products across 7 categories with unique details
--- Images sourced from Unsplash for production quality
-
--- Clear existing products (optional - comment out if keeping old data)
+-- REALISTIC PRODUCT DATA
 -- DELETE FROM PRODUCTS;
 -- ALTER SEQUENCE PRODUCT_SEQ RESTART START WITH 1;
 
--- =============================================
 -- MEN'S CLOTHING & FASHION (20 products)
--- =============================================
 
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Premium Cotton Casual Shirt', 1499, 'Breathable 100% cotton casual shirt perfect for weekends and office-casual environments. Features reinforced buttons and comfortable fit.', 'Men', 'Urban Style', 45, 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=500&fit=crop', 4.5);
@@ -66,9 +58,7 @@ VALUES (PRODUCT_SEQ.NEXTVAL, 'Distressed Slim Jeans', 2499, 'Trendy distressed s
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Reversible Down Jacket', 6999, 'Premium reversible down jacket with water-resistant shell. Lightweight yet incredibly warm. Perfect for cold seasons.', 'Men', 'Premium Gear', 18, 'https://images.unsplash.com/photo-1552752091-8da1bfbd7c9b?w=500&h=500&fit=crop', 4.7);
 
--- =============================================
 -- WOMEN'S CLOTHING & FASHION (20 products)
--- =============================================
 
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Floral Summer Dress', 2499, 'Elegant floral print summer dress with comfortable fit. Perfect for brunches, dates, and casual gatherings. Breathable fabric.', 'Women', 'Elle & Co', 54, 'https://images.unsplash.com/photo-1595777707802-c5c0cdde9e13?w=500&h=500&fit=crop', 4.6);
@@ -121,9 +111,7 @@ VALUES (PRODUCT_SEQ.NEXTVAL, 'Leather Pants', 4599, 'Chic black leather pants fo
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Off-Shoulder Top', 1699, 'Trendy off-shoulder top perfect for casual dates. Comfortable fit with modern style. Great for warm weather.', 'Women', 'TrendyWear', 48, 'https://images.unsplash.com/photo-1595777707802-c5c0cdde9e13?w=500&h=500&fit=crop', 4.2);
 
--- =============================================
 -- KIDS' CLOTHING (15 products)
--- =============================================
 
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Cartoon Print T-Shirt Kids', 599, 'Fun cartoon print t-shirt for kids. Soft comfortable cotton. Perfect for daily wear and play.', 'Kids', 'KidsStyle', 78, 'https://images.unsplash.com/photo-1503784444102-40cb628cb857?w=500&h=500&fit=crop', 4.3);
@@ -161,9 +149,7 @@ VALUES (PRODUCT_SEQ.NEXTVAL, 'Plaid Dress Shirt', 999, 'Classic plaid dress shir
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Colorful Swim Shorts', 799, 'Vibrant colorful swim shorts for kids. Quick-dry fabric. Perfect for pool and beach.', 'Kids', 'BeachKids', 53, 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=500&h=500&fit=crop', 4.3);
 
--- =============================================
 -- FOOTWEAR (20 products)
--- =============================================
 
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Running Shoes Pro', 3999, 'Professional running shoes with responsive cushioning and excellent grip. Perfect for daily runs and training. Lightweight design.', 'Footwear', 'RunnerX', 42, 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop', 4.6);
@@ -210,9 +196,7 @@ VALUES (PRODUCT_SEQ.NEXTVAL, 'Boat Shoes', 2499, 'Classic boat shoes perfect for
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Platform Heels', 2999, 'Trendy platform heels perfect for parties. Comfortable with sturdy heel. Stylish design.', 'Footwear', 'HeelStyle', 28, 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=500&fit=crop', 4.4);
 
--- =============================================
 -- ACCESSORIES (20 products)
--- =============================================
 
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Stainless Steel Watch', 4999, 'Premium stainless steel watch with chronograph function. Water-resistant and durable. Timeless design for any occasion.', 'Accessories', 'TimeKeeper', 31, 'https://images.unsplash.com/photo-1516128748890-31d71b38bda1?w=500&h=500&fit=crop', 4.6);
@@ -256,9 +240,7 @@ VALUES (PRODUCT_SEQ.NEXTVAL, 'Pocket Square', 449, 'Stylish pocket square for fo
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Trendy Phone Case', 599, 'Protective trendy phone case with stylish design. Durable material protects your phone. Various colors available.', 'Accessories', 'PhoneStyle', 95, 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500&h=500&fit=crop', 4.1);
 
--- =============================================
 -- BEAUTY & PERSONAL CARE (15 products)
--- =============================================
 
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Organic Face Serum', 1899, 'Premium organic face serum with natural ingredients. Perfect for all skin types. Nourishing and hydrating formula.', 'Beauty', 'NaturalGlow', 38, 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=500&fit=crop', 4.6);
@@ -296,9 +278,7 @@ VALUES (PRODUCT_SEQ.NEXTVAL, 'Nail Polish Set', 899, 'Beautiful nail polish set 
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Blush Powder', 699, 'Soft blush powder for natural rosy cheeks. Blendable formula. Available in multiple shades.', 'Beauty', 'BlushPerfect', 65, 'https://images.unsplash.com/photo-1596786477185-4875e92cc0d6?w=500&h=500&fit=crop', 4.3);
 
--- =============================================
 -- ELECTRONICS (15 products)
--- =============================================
 
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Wireless Bluetooth Headphones', 2999, 'Premium wireless bluetooth headphones with noise cancellation. 30-hour battery life. Crystal clear sound quality.', 'Electronics', 'SoundMax', 31, 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop', 4.7);
@@ -339,14 +319,4 @@ VALUES (PRODUCT_SEQ.NEXTVAL, 'Tablet Stand', 899, 'Sturdy tablet stand for hands
 INSERT INTO PRODUCTS (PRODUCT_ID, PRODUCT_NAME, PRICE, DESCRIPTION, CATEGORY, BRAND, STOCK, IMAGE_URL, RATING) 
 VALUES (PRODUCT_SEQ.NEXTVAL, 'Wireless Charging Pad', 1299, 'Fast wireless charging pad compatible with all qi-enabled devices. Non-slip surface. Compact design.', 'Electronics', 'ChargePad', 44, 'https://images.unsplash.com/photo-1587829191301-dc798b83add3?w=500&h=500&fit=crop', 4.3);
 
--- =============================================
--- COMMIT CHANGES
--- =============================================
 COMMIT;
-
--- =============================================
--- VERIFICATION QUERY
--- =============================================
--- Run this to verify all products were inserted:
--- SELECT COUNT(*) as TOTAL_PRODUCTS FROM PRODUCTS;
--- SELECT DISTINCT CATEGORY, COUNT(*) as COUNT FROM PRODUCTS GROUP BY CATEGORY;

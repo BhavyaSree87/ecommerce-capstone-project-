@@ -36,11 +36,15 @@ export default function FormInput({
           className={inputClasses}
         >
           <option value="">Select {label}</option>
-          {options.map((opt) => (
-            <option key={opt.id || opt.value} value={opt.id || opt.value}>
-              {opt.name || opt.label}
-            </option>
-          ))}
+          {options.map((opt, index) => {
+            const optionValue = opt.value ?? opt.id ?? opt.category_name ?? opt.name ?? '';
+            const optionLabel = opt.label ?? opt.name ?? opt.category_name ?? opt.value ?? '';
+            return (
+              <option key={optionValue || index} value={optionValue}>
+                {optionLabel}
+              </option>
+            );
+          })}
         </select>
       ) : multiline ? (
         <textarea

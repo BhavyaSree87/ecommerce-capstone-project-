@@ -70,7 +70,7 @@ export default function AdminInventory() {
       {/* Stock Alerts */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="rounded-2xl border border-orange-200 bg-orange-50 p-4">
-          <p className="text-sm font-medium text-orange-700">Low Stock (<10)</p>
+          <p className="text-sm font-medium text-orange-700">Low Stock (10)</p>
           <p className="text-2xl font-bold text-orange-900 mt-1">{lowStockProducts.length}</p>
         </div>
         

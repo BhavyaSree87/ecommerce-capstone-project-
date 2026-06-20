@@ -15,13 +15,33 @@ const getAuthHeaders = () => {
   };
 };
 
+const normalizeEntity = (entity) => {
+  if (!entity || Array.isArray(entity) || typeof entity !== 'object') return entity;
+  const normalized = { ...entity };
+  if (normalized.product_id !== undefined) normalized.id = normalized.product_id;
+  if (normalized.category_id !== undefined) normalized.id = normalized.category_id;
+  if (normalized.order_id !== undefined && normalized.id === undefined) normalized.id = normalized.order_id;
+  if (normalized.user_id !== undefined && normalized.id === undefined && normalized.username) normalized.id = normalized.user_id;
+  if (normalized.created_at !== undefined) {
+    if (normalized.order_date === undefined) normalized.order_date = normalized.created_at;
+    if (normalized.createdAt === undefined) normalized.createdAt = normalized.created_at;
+  }
+  if (normalized.product_name !== undefined && normalized.name === undefined) {
+    normalized.name = normalized.product_name;
+  }
+  if (normalized.category_name !== undefined && normalized.name === undefined) {
+    normalized.name = normalized.category_name;
+  }
+  return normalized;
+};
+
 const normalizeListResponse = (response) => {
-  if (Array.isArray(response)) return response;
-  if (!response) return [];
-  if (Array.isArray(response.items)) return response.items;
-  if (Array.isArray(response.data)) return response.data;
-  if (Array.isArray(response.results)) return response.results;
-  return [];
+  let items = [];
+  if (Array.isArray(response)) items = response;
+  else if (response?.items && Array.isArray(response.items)) items = response.items;
+  else if (response?.data && Array.isArray(response.data)) items = response.data;
+  else if (response?.results && Array.isArray(response.results)) items = response.results;
+  return items.map(normalizeEntity);
 };
 
 const request = async (path, options = {}) => {
@@ -73,9 +93,21 @@ const getProductById = async (id) => {
 
 const createProduct = async (productData) => {
   try {
+    const payload = {
+      product_name: productData.product_name,
+      description: productData.description,
+      category: productData.category,
+      brand: productData.brand,
+      price: parseFloat(productData.price) || 0,
+      stock: parseInt(productData.stock) || 0,
+      rating: productData.rating ? parseFloat(productData.rating) : null,
+      discount: productData.discount ? parseFloat(productData.discount) : 0,
+      image_url: productData.image_url || null,
+    };
+
     return await request("/api/products/add", {
       method: "POST",
-      body: JSON.stringify(productData),
+      body: JSON.stringify(payload),
     });
   } catch (error) {
     console.error("Create product error:", error);
@@ -85,9 +117,21 @@ const createProduct = async (productData) => {
 
 const updateProduct = async (id, productData) => {
   try {
-    return await request(`/api/products/${id}`, {
+    const payload = {
+      product_name: productData.product_name,
+      description: productData.description,
+      category: productData.category,
+      brand: productData.brand,
+      price: parseFloat(productData.price) || 0,
+      stock: parseInt(productData.stock) || 0,
+      rating: productData.rating ? parseFloat(productData.rating) : null,
+      discount: productData.discount ? parseFloat(productData.discount) : 0,
+      image_url: productData.image_url || null,
+    };
+
+    return await request(`/api/products/update/${id}`, {
       method: "PUT",
-      body: JSON.stringify(productData),
+      body: JSON.stringify(payload),
     });
   } catch (error) {
     console.error("Update product error:", error);
@@ -97,7 +141,7 @@ const updateProduct = async (id, productData) => {
 
 const deleteProduct = async (id) => {
   try {
-    return await request(`/api/products/${id}`, {
+    return await request(`/api/products/delete/${id}`, {
       method: "DELETE",
     });
   } catch (error) {
@@ -131,7 +175,7 @@ const createCategory = async (categoryData) => {
 
 const updateCategory = async (id, categoryData) => {
   try {
-    return await request(`/api/categories/${id}`, {
+    return await request(`/api/categories/update/${id}`, {
       method: "PUT",
       body: JSON.stringify(categoryData),
     });
@@ -143,7 +187,7 @@ const updateCategory = async (id, categoryData) => {
 
 const deleteCategory = async (id) => {
   try {
-    return await request(`/api/categories/${id}`, {
+    return await request(`/api/categories/delete/${id}`, {
       method: "DELETE",
     });
   } catch (error) {
@@ -174,7 +218,7 @@ const getOrderById = async (id) => {
 
 const updateOrderStatus = async (id, status) => {
   try {
-    return await request(`/api/orders/${id}/status`, {
+    return await request(`/api/orders/status/${id}`, {
       method: "PUT",
       body: JSON.stringify({ status }),
     });
@@ -206,7 +250,7 @@ const getUserById = async (id) => {
 
 const deleteUser = async (id) => {
   try {
-    return await request(`/api/users/${id}`, {
+    return await request(`/api/users/delete/${id}`, {
       method: "DELETE",
     });
   } catch (error) {

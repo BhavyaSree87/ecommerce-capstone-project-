@@ -25,7 +25,7 @@ export default function AdminPayments() {
         amount: order.total_amount,
         method: 'Card/Digital',
         status: order.status,
-        date: order.order_date,
+        date: order.order_date || order.created_at || order.createdAt,
       }));
       setPayments(paymentsData);
     } catch (err) {

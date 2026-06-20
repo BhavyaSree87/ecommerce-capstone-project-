@@ -62,8 +62,9 @@ export default function AdminReports() {
   const getSalesPerDay = () => {
     const salesByDay = {};
     orders.forEach(order => {
-      if (order.order_date) {
-        const date = new Date(order.order_date).toLocaleDateString();
+      const dateValue = order.order_date || order.created_at || order.createdAt;
+      if (dateValue) {
+        const date = new Date(dateValue).toLocaleDateString();
         salesByDay[date] = (salesByDay[date] || 0) + (order.total_amount || 0);
       }
     });

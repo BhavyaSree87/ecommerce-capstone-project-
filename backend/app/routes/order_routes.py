@@ -166,6 +166,47 @@ def get_orders(page: int = Query(1, ge=1), page_size: int = Query(20, ge=1, le=1
         conn.close()
 
 
+@router.get("/{order_id}", dependencies=[Depends(admin_only)])
+def get_order(order_id: int):
+    conn = get_connection()
+    cursor = conn.cursor()
+    try:
+        cursor.execute(
+            "SELECT ORDER_ID, ITEM_ID, PRODUCT_ID, QUANTITY, PRICE, STATUS, USER_ID, CREATED_AT FROM ORDERS WHERE ORDER_ID = :id",
+            {"id": order_id},
+        )
+        rows = cursor.fetchall()
+        if not rows:
+            raise HTTPException(status_code=404, detail="Order not found")
+
+        items = [
+            {
+                "order_id": row[0],
+                "item_id": row[1],
+                "product_id": row[2],
+                "quantity": row[3],
+                "price": row[4],
+                "status": row[5],
+                "user_id": row[6],
+                "created_at": row[7],
+                "total_amount": row[3] * row[4],
+            }
+            for row in rows
+        ]
+
+        return {
+            "order_id": order_id,
+            "items": items,
+            "user_id": items[0]["user_id"],
+            "status": items[-1]["status"],
+            "created_at": items[0]["created_at"],
+            "total_amount": sum(item["total_amount"] for item in items),
+        }
+    finally:
+        cursor.close()
+        conn.close()
+
+
 @router.get("/user/{user_id}")
 def get_orders_for_user(user_id: int, page: int = Query(1, ge=1), page_size: int = Query(20, ge=1, le=100), user=Depends(current_user)):
     

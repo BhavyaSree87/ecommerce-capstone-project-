@@ -1,7 +1,3 @@
--- =============================================
--- ECOMMERCE PLATFORM - SAMPLE DATA
--- =============================================
-
 -- Insert sample users
 INSERT INTO USERS (ID, NAME, EMAIL, PASSWORD, ROLE, MOBILE, ADDRESS, CITY, STATE, PINCODE)
 VALUES (USER_SEQ.NEXTVAL, 'Admin User', 'admin@ecommerce.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5YmMxSUGyXlem', 'ADMIN', '9999999999', '123 Admin Street', 'Hyderabad', 'Telangana', '500001');

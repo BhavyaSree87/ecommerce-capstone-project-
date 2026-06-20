@@ -23,9 +23,22 @@ class ShoppingAssistantRequest(BaseModel):
     model_config = ConfigDict(str_strip_whitespace=True)
 
 
+class ShoppingAssistantProduct(BaseModel):
+    product_id: int = Field(..., example=1)
+    product_name: str = Field(..., example="Dell Gaming Laptop")
+    price: float = Field(..., example=89999.99)
+    category: str = Field(..., example="Electronics")
+    brand: str = Field(..., example="Dell")
+    stock: int = Field(..., example=15)
+    rating: Optional[float] = Field(None, example=4.5)
+    image_url: Optional[str] = Field(None, example="https://example.com/image.jpg")
+
+
 class ShoppingAssistantResponse(BaseModel):
-    
-    answer: str = Field(..., example="Based on your budget of 50000, I recommend the Samsung Galaxy A50 at 45,999 with excellent camera quality and battery life. Another great option is the Redmi Note 9 Pro at 42,999 with a high refresh rate display.")
+    success: bool = Field(..., example=True)
+    message: str = Field(..., example="Found 5 matching products")
+    answer: Optional[str] = Field(None, example="Based on your query, here are the best matches...")
+    products: List[ShoppingAssistantProduct] = Field(default_factory=list)
 
 
 class ProductSearchRequest(BaseModel):
@@ -44,6 +57,7 @@ class ProductSearchResult(BaseModel):
     brand: str = Field(..., example="Dell")
     stock: int = Field(..., example=15)
     rating: Optional[float] = Field(None, example=4.5)
+    image_url: Optional[str] = Field(None, example="https://example.com/image.jpg")
     relevance_score: float = Field(..., example=95.5, description="Relevance score 0-100")
 
 

@@ -134,6 +134,7 @@ def product_search(request: ProductSearchRequest):
                 brand=product.get('BRAND', ''),
                 stock=product.get('STOCK', 0),
                 rating=float(product.get('RATING', 0)) if product.get('RATING') else None,
+                image_url=product.get('IMAGE_URL', ''),
                 relevance_score=float(product.get('RELEVANCE_SCORE', 0))
             )
             results.append(result)

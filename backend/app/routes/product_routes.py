@@ -17,6 +17,9 @@ def add_product(
     conn = get_connection()
     cursor = conn.cursor()
 
+    cursor.execute("SELECT PRODUCT_SEQ.NEXTVAL FROM DUAL")
+    product_id = cursor.fetchone()[0]
+
     cursor.execute("""
         INSERT INTO PRODUCTS
         (
@@ -32,7 +35,7 @@ def add_product(
         )
         VALUES
         (
-            PRODUCT_SEQ.NEXTVAL,
+            :product_id,
             :product_name,
             :price,
             :description,
@@ -44,6 +47,7 @@ def add_product(
         )
     """,
     {
+        "product_id": product_id,
         "product_name": product.product_name,
         "price": product.price,
         "description": product.description,
@@ -60,7 +64,15 @@ def add_product(
     conn.close()
 
     return {
-        "message": "Product Added Successfully"
+        "product_id": product_id,
+        "product_name": product.product_name,
+        "price": product.price,
+        "description": product.description,
+        "category": product.category,
+        "brand": product.brand,
+        "stock": product.stock,
+        "image_url": product.image_url,
+        "rating": product.rating
     }
 
 

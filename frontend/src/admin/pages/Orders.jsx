@@ -69,11 +69,12 @@ export default function AdminOrders() {
       label: 'User ID',
     },
     {
-      key: 'order_date',
+      key: 'created_at',
       label: 'Date',
-      render: (value) => {
-        if (!value) return '-';
-        const date = new Date(value);
+      render: (value, row) => {
+        const dateValue = value || row.order_date || row.createdAt;
+        if (!dateValue) return '-';
+        const date = new Date(dateValue);
         return date.toLocaleDateString();
       },
     },

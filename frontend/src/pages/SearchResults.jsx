@@ -10,17 +10,34 @@ export default function SearchResults() {
   const [aiResults, setAiResults] = useState([]);
   const [searchLoading, setSearchLoading] = useState(false);
   const searchWithAI = async () => {
-  try {
-    setSearchLoading(true);
+    try {
+      setSearchLoading(true);
 
-    const response = await axios.post(
-      "http://127.0.0.1:8000/api/ai/product-search",
-      {
-        query: searchQuery || "clothing"
-      }
-    );
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/ai/product-search",
+        {
+          query: searchQuery || "clothing"
+        }
+      );
 
-    setAiResults(response.data.products || []);
+      const results = response.data.results || [];
+      setAiResults(
+        results.map((product) => ({
+          id: product.product_id?.toString() || product.product_id || "",
+          product_id: product.product_id,
+          product_name: product.product_name || product.name || "",
+          name: product.product_name || product.name || "",
+          description: product.description || "",
+          category: product.category || "",
+          brand: product.brand || "",
+          price: Number(product.price) || 0,
+          stock: Number(product.stock) || 0,
+          rating: Number(product.rating) || 0,
+          image_url: product.image_url || product.IMAGE_URL || "",
+          images: [product.image_url || product.IMAGE_URL].filter(Boolean),
+          zone: product.category || "",
+        }))
+      );
     } catch (error) {
       console.error(error);
       alert("AI Product Search Failed");

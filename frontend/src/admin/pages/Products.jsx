@@ -31,6 +31,7 @@ export default function AdminProducts() {
         adminService.getAllProducts(),
         adminService.getAllCategories(),
       ]);
+      console.log('Categories API response', categoriesData);
       
       setProducts(productsData);
       setCategories(categoriesData);
@@ -96,6 +97,19 @@ export default function AdminProducts() {
   };
 
   const columns = [
+    {
+      key: 'image_url',
+      label: '',
+      width: 'w-20',
+      render: (value, row) => {
+        const src = row.image_url || row.images?.[0] || '';
+        return src ? (
+          <img src={src} alt={row.product_name || row.name} className="w-12 h-12 object-cover rounded" />
+        ) : (
+          <div className="w-12 h-12 bg-slate-100 rounded" />
+        );
+      }
+    },
     {
       key: 'product_name',
       label: 'Product Name',

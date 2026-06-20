@@ -26,10 +26,14 @@ export default function AdminDashboard() {
           status: order[5],
           user_id: order[6],
           created_at: order[7],
+          order_date: order[7],
           total_amount: order[3] * order[4],
         };
       }
-      return order;
+      return {
+        ...order,
+        order_date: order.order_date || order.created_at || order.createdAt,
+      };
     };
 
     const fetchStats = async () => {
@@ -41,9 +45,7 @@ export default function AdminDashboard() {
         const products = safeArray(await adminService.getAllProducts());
         const categories = safeArray(await adminService.getAllCategories());
         const orders = safeArray(await adminService.getAllOrders()).map(normalizeOrder);
-        const users = safeArray(await adminService.getAllUsers());
 
-        const totalRevenue = orders.reduce((sum, order) => sum + (order.total_amount || 0), 0);
         const recentOrders = orders.slice(0, 5);
         const topProducts = products
           .slice()
@@ -54,8 +56,8 @@ export default function AdminDashboard() {
           totalProducts: dashboardStats?.total_products ?? products.length,
           totalCategories: categories.length,
           totalOrders: dashboardStats?.total_orders ?? orders.length,
-          totalUsers: dashboardStats?.total_users ?? users.length,
-          totalRevenue: dashboardStats?.total_revenue ?? totalRevenue,
+          totalUsers: dashboardStats?.total_users ?? 0,
+          totalRevenue: dashboardStats?.total_revenue ?? orders.reduce((sum, order) => sum + (order.total_amount || 0), 0),
           recentOrders,
           topProducts,
         });
