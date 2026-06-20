@@ -21,6 +21,8 @@ class Settings(BaseSettings):
     secret_key: str = os.getenv("SECRET_KEY", "your-super-secret-key-change-in-production")
     algorithm: str = os.getenv("ALGORITHM", "HS256")
     access_token_expire_hours: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_HOURS", 2))
+    razorpay_key_id: str = ""
+    razorpay_key_secret: str = ""
     
     # Logging Configuration
     log_level: str = os.getenv("LOG_LEVEL", "INFO")
