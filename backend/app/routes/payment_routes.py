@@ -1,44 +1,120 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
+from app.config import get_settings
 from app.database.db import get_connection
-from app.schemas.payment_schema import PaymentCreate, PaymentOut, PaginatedPayments
+from app.logger import get_logger
+from app.schemas.payment_schema import (
+    PaymentCreate,
+    PaymentOut,
+    PaginatedPayments,
+    RazorpayOrderCreateRequest,
+    RazorpayOrderResponse,
+    RazorpayVerifyRequest,
+)
 from app.utils.auth_dependency import current_user, admin_only
+import razorpay
 
+settings = get_settings()
+logger = get_logger("payment_routes")
 router = APIRouter()
 
 
-@router.post("/pay", response_model=PaymentOut)
+def _get_razorpay_client():
+    if not settings.razorpay_key_id or not settings.razorpay_key_secret:
+        raise HTTPException(status_code=500, detail="Razorpay configuration is not set.")
+    return razorpay.Client(auth=(settings.razorpay_key_id, settings.razorpay_key_secret))
+
+
+@router.post("/razorpay/create-order", response_model=RazorpayOrderResponse)
+def create_razorpay_order(payload: RazorpayOrderCreateRequest, user=Depends(current_user)):
+    client = _get_razorpay_client()
+    try:
+        logger.info("Creating Razorpay order request for user_id=%s payload=%s", user.get("user_id"), payload.dict())
+        razorpay_data = {
+            "amount": int(round(payload.amount * 100)),
+            "currency": payload.currency,
+            "receipt": payload.receipt,
+            "payment_capture": 1,
+            "notes": payload.notes or {},
+        }
+        logger.debug("Razorpay create_order payload: %s", razorpay_data)
+        razorpay_order = client.order.create(razorpay_data)
+        return {
+            "razorpay_order_id": razorpay_order["id"],
+            "amount": razorpay_order["amount"],
+            "currency": razorpay_order["currency"],
+            "receipt": razorpay_order["receipt"],
+            "status": razorpay_order["status"],
+        }
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"Failed to create Razorpay order: {exc}")
+
+
+@router.post("/razorpay/verify")
+def verify_razorpay_payment(payload: RazorpayVerifyRequest, user=Depends(current_user)):
+    client = _get_razorpay_client()
+    try:
+        logger.info("Verifying Razorpay payment for user_id=%s payload=%s", user.get("user_id"), payload.dict())
+        client.utility.verify_payment_signature(
+            {
+                "razorpay_order_id": payload.razorpay_order_id,
+                "razorpay_payment_id": payload.razorpay_payment_id,
+                "razorpay_signature": payload.razorpay_signature,
+            }
+        )
+        return {"status": "verified"}
+    except razorpay.errors.SignatureVerificationError as exc:
+        raise HTTPException(status_code=400, detail=f"Invalid payment signature: {exc}")
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"Razorpay verification failed: {exc}")
+
+
+@router.post("/save", response_model=PaymentOut)
 def make_payment(payment: PaymentCreate, user=Depends(current_user)):
     conn = get_connection()
     cursor = conn.cursor()
     try:
         cursor.execute("SELECT PAYMENTS_SEQ.NEXTVAL FROM DUAL")
         pid = cursor.fetchone()[0]
-        
-        if getattr(payment, 'transaction_id', None):
-            cursor.execute(
-                """
-                INSERT INTO PAYMENTS (PAYMENT_ID, ORDER_ID, PAYMENT_METHOD, PAYMENT_STATUS, AMOUNT, TRANSACTION_ID)
-                VALUES (:pid, :order_id, :payment_method, :payment_status, :amount, :transaction_id)
-                """,
-                {
-                    "pid": pid,
-                    "order_id": payment.order_id,
-                    "payment_method": payment.payment_method,
-                    "payment_status": payment.payment_status,
-                    "amount": payment.amount,
-                    "transaction_id": payment.transaction_id,
-                },
-            )
-        else:
-            cursor.execute(
-                """
-                INSERT INTO PAYMENTS (PAYMENT_ID, ORDER_ID, PAYMENT_METHOD, PAYMENT_STATUS, AMOUNT)
-                VALUES (:pid, :order_id, :payment_method, :payment_status, :amount)
-                """,
-                {"pid": pid, "order_id": payment.order_id, "payment_method": payment.payment_method, "payment_status": payment.payment_status, "amount": payment.amount},
-            )
+        insert_fields = ["PAYMENT_ID", "ORDER_ID", "PAYMENT_METHOD", "PAYMENT_STATUS", "AMOUNT"]
+        insert_values = [":pid", ":order_id", ":payment_method", ":payment_status", ":amount"]
+        params = {
+            "pid": pid,
+            "order_id": payment.order_id,
+            "payment_method": payment.payment_method,
+            "payment_status": payment.payment_status,
+            "amount": payment.amount,
+        }
+
+        if payment.transaction_id is not None:
+            insert_fields.append("TRANSACTION_ID")
+            insert_values.append(":transaction_id")
+            params["transaction_id"] = payment.transaction_id
+
+        if getattr(payment, "razorpay_order_id", None) is not None:
+            insert_fields.append("RAZORPAY_ORDER_ID")
+            insert_values.append(":razorpay_order_id")
+            params["razorpay_order_id"] = payment.razorpay_order_id
+
+        if getattr(payment, "razorpay_payment_id", None) is not None:
+            insert_fields.append("RAZORPAY_PAYMENT_ID")
+            insert_values.append(":razorpay_payment_id")
+            params["razorpay_payment_id"] = payment.razorpay_payment_id
+
+        cursor.execute(
+            f"INSERT INTO PAYMENTS ({', '.join(insert_fields)}) VALUES ({', '.join(insert_values)})",
+            params,
+        )
         conn.commit()
-        return {"payment_id": pid, "order_id": payment.order_id, "payment_method": payment.payment_method, "payment_status": payment.payment_status, "amount": payment.amount}
+        return {
+            "payment_id": pid,
+            "order_id": payment.order_id,
+            "payment_method": payment.payment_method,
+            "payment_status": payment.payment_status,
+            "amount": payment.amount,
+            "transaction_id": payment.transaction_id,
+            "razorpay_order_id": getattr(payment, "razorpay_order_id", None),
+            "razorpay_payment_id": getattr(payment, "razorpay_payment_id", None),
+        }
     finally:
         cursor.close()
         conn.close()

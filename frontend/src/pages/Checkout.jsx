@@ -1,6 +1,7 @@
-import React, { useContext, useMemo, useState } from "react";
+import React, { useContext, useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
+import { AuthContext } from "../context/AuthContext";
 import { calculateCartTotals } from "../services/cartService";
 
 const initialAddress = {
@@ -14,6 +15,7 @@ const initialAddress = {
 
 export default function Checkout() {
   const { cartItems } = useContext(ShopContext);
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const [shipping, setShipping] = useState(initialAddress);
   const [billing, setBilling] = useState(initialAddress);
@@ -23,8 +25,51 @@ export default function Checkout() {
 
   const totals = useMemo(() => calculateCartTotals(cartItems), [cartItems]);
 
+  // Prefill shipping/billing from user profile if available (helps multi-order flow)
+  useEffect(() => {
+    if (!user) return;
+    // Only prefill when current shipping is empty to avoid overwriting user edits
+    const isEmpty = Object.values(shipping).every((v) => !v || v.trim() === "");
+    if (!isEmpty) return;
+
+    setShipping((prev) => ({
+      name: user.name || prev.name,
+      line1: user.address || prev.line1,
+      city: user.city || prev.city,
+      state: user.state || prev.state,
+      pincode: user.pincode || prev.pincode,
+      phone: user.mobile || prev.phone,
+    }));
+
+    // If billing should default to same as shipping, set it too
+    if (sameBilling) {
+      setBilling((prev) => ({
+        name: user.name || prev.name,
+        line1: user.address || prev.line1,
+        city: user.city || prev.city,
+        state: user.state || prev.state,
+        pincode: user.pincode || prev.pincode,
+        phone: user.mobile || prev.phone,
+      }));
+    }
+  }, [user]);
+
+  // Validation helper: check if any address field is empty or whitespace-only
+  const isAddressFieldEmpty = (address) => {
+    return Object.values(address).some(val => !val || val.trim() === "");
+  };
+
+  // Validation helper: address is valid if no fields are empty
+  const isAddressValid = (address) => {
+    return !isAddressFieldEmpty(address);
+  };
+
+  // Form can submit only if shipping is valid and billing is valid (if not using same)
+  const canSubmit = isAddressValid(shipping) && (sameBilling || isAddressValid(billing));
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!canSubmit) return;
     navigate("/payment", {
       state: {
         shipping,
@@ -68,6 +113,12 @@ export default function Checkout() {
             ))}
           </section>
 
+          {isAddressFieldEmpty(shipping) && (
+            <div className="p-4 bg-red-50 border border-red-200 rounded-2xl">
+              <p className="text-sm font-medium text-red-700">Please fill in all shipping address fields</p>
+            </div>
+          )}
+
           <section className="space-y-4">
             <div className="flex items-center gap-3">
               <input type="checkbox" checked={sameBilling} onChange={() => setSameBilling(!sameBilling)} className="h-4 w-4" />
@@ -89,6 +140,12 @@ export default function Checkout() {
               </div>
             )}
           </section>
+
+          {!sameBilling && isAddressFieldEmpty(billing) && (
+            <div className="p-4 bg-red-50 border border-red-200 rounded-2xl">
+              <p className="text-sm font-medium text-red-700">Please fill in all billing address fields</p>
+            </div>
+          )}
 
           <section className="space-y-4">
             <h2 className="text-xl font-semibold">Delivery Options</h2>
@@ -136,7 +193,16 @@ export default function Checkout() {
             </div>
           </section>
 
-          <button className="w-full bg-primary text-white rounded-3xl py-4 font-semibold hover:bg-pink-600 transition">Continue to Payment</button>
+          <button 
+            disabled={!canSubmit} 
+            className={`w-full py-4 rounded-3xl font-semibold transition ${
+              canSubmit 
+                ? "bg-primary text-white hover:bg-pink-600 cursor-pointer" 
+                : "bg-slate-300 text-slate-500 cursor-not-allowed"
+            }`}
+          >
+            Continue to Payment
+          </button>
         </form>
 
         <aside className="space-y-6">

@@ -44,7 +44,16 @@ def create_order(order: OrderPlace, user=Depends(current_user)):
             stock = row[0]
             inventory_row = _get_inventory_for_update(cursor, it.product_id)
             if not inventory_row:
-                raise HTTPException(status_code=400, detail=f"Inventory record not found for product {it.product_id}")
+                # Auto-create inventory record for existing product using current STOCK value
+                try:
+                    cursor.execute(
+                        "INSERT INTO INVENTORY (INVENTORY_ID, PRODUCT_ID, AVAILABLE_STOCK, RESERVED_STOCK, LAST_UPDATED) VALUES (INVENTORY_SEQ.NEXTVAL, :pid, :stk, 0, SYSDATE)",
+                        {"pid": it.product_id, "stk": stock},
+                    )
+                    # re-fetch the inventory row under lock
+                    inventory_row = _get_inventory_for_update(cursor, it.product_id)
+                except Exception as e:
+                    raise HTTPException(status_code=500, detail=f"Failed to create inventory for product {it.product_id}: {e}")
 
             available_stock, reserved_stock = inventory_row
             if available_stock < it.quantity:

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../../services/config";
 
 export default function AIAssistant() {
   const [open, setOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function AIAssistant() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/ai/shopping-assistant",
+        `${API_BASE_URL}/api/ai/shopping-assistant`,
         {
           query: query,
         }

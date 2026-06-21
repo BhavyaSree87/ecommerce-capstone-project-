@@ -33,6 +33,35 @@ class PaymentCreate(BaseModel):
     payment_status: Optional[PaymentStatusEnum] = Field(PaymentStatusEnum.PENDING, description="Payment status")
     amount: float = Field(..., gt=0, description="Payment amount")
     transaction_id: Optional[str] = Field(None, max_length=100, description="External transaction ID")
+    razorpay_order_id: Optional[str] = Field(None, max_length=100, description="Razorpay order ID")
+    razorpay_payment_id: Optional[str] = Field(None, max_length=100, description="Razorpay payment ID")
+
+    model_config = ConfigDict(str_strip_whitespace=True)
+
+
+class RazorpayOrderCreateRequest(BaseModel):
+    amount: float = Field(..., gt=0, description="Amount in INR")
+    currency: str = Field("INR", description="Currency code")
+    receipt: str = Field(..., min_length=1, description="Receipt identifier")
+    notes: Optional[dict] = Field(None, description="Order notes")
+
+    model_config = ConfigDict(str_strip_whitespace=True)
+
+
+class RazorpayOrderResponse(BaseModel):
+    razorpay_order_id: str = Field(..., description="Razorpay order ID")
+    amount: int = Field(..., description="Amount in paise")
+    currency: str = Field(..., description="Currency code")
+    receipt: str = Field(..., description="Receipt ID")
+    status: str = Field(..., description="Order status")
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class RazorpayVerifyRequest(BaseModel):
+    razorpay_order_id: str = Field(..., description="Razorpay order ID")
+    razorpay_payment_id: str = Field(..., description="Razorpay payment ID")
+    razorpay_signature: str = Field(..., description="Razorpay payment signature")
 
     model_config = ConfigDict(str_strip_whitespace=True)
 
@@ -45,6 +74,8 @@ class PaymentOut(BaseModel):
     payment_status: str = Field(..., description="Payment status")
     amount: float = Field(..., description="Payment amount")
     transaction_id: Optional[str] = None
+    razorpay_order_id: Optional[str] = None
+    razorpay_payment_id: Optional[str] = None
     created_at: Optional[datetime] = None
 
     model_config = ConfigDict(from_attributes=True)

@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { ShopContext } from "../context/ShopContext";
 import paymentService from "../services/paymentService";
-import { placeOrder } from "../services/orderService";
 
 const availableBanks = [
   "HDFC Bank",
@@ -54,25 +53,22 @@ export default function Payment() {
     setError(null);
 
     try {
-      await paymentService.simulatePayment({
-        method: paymentMethod,
-        details: paymentDetails,
-        amount: paymentState.totals.total,
-      });
-
-      const order = await placeOrder({
-        user,
-        items: cartItems,
-        shippingAddress: paymentState.shipping,
-        billingAddress: paymentState.sameBilling ? paymentState.shipping : paymentState.billing,
+      const order = await paymentService.processCheckout({
         paymentMethod,
-        totals: paymentState.totals,
-        coupon: paymentState.coupon,
+        paymentDetails,
+        paymentState,
+        cartItems,
+        user,
       });
 
       navigate("/order-success", { state: { order } });
     } catch (err) {
-      setError(err.message || "Unable to complete payment. Please try again.");
+      // Prefer backend validation message when available
+      const backendDetail = err?.response?.data?.detail || err?.response?.data || err?.response?.data?.message;
+      const msg = backendDetail
+        ? (typeof backendDetail === 'string' ? backendDetail : JSON.stringify(backendDetail))
+        : err.message || "Unable to complete payment. Please try again.";
+      setError(msg);
     } finally {
       setProcessing(false);
     }

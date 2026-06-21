@@ -1,23 +1,28 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+import httpClient from "./httpClient";
 
-const request = async (path, options = {}) => {
-  const response = await fetch(`${API_BASE_URL}${path}`, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-    ...options,
-  });
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`API request failed: ${response.status} ${response.statusText} - ${errorText}`);
-  }
-
-  return response.json();
+const get = async (path, params = {}) => {
+  const response = await httpClient.get(path, { params });
+  return response.data;
 };
 
-const get = async (path) => request(path, { method: "GET" });
+const post = async (path, body, options = {}) => {
+  const response = await httpClient.post(path, body, options);
+  return response.data;
+};
+
+const put = async (path, body, options = {}) => {
+  const response = await httpClient.put(path, body, options);
+  return response.data;
+};
+
+const del = async (path, options = {}) => {
+  const response = await httpClient.delete(path, options);
+  return response.data;
+};
 
 export default {
   get,
+  post,
+  put,
+  delete: del,
 };

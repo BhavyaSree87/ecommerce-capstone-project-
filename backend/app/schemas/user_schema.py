@@ -28,11 +28,20 @@ class UserLogin(BaseModel):
 class UserUpdate(BaseModel):
     
     name: Optional[str] = Field(None, min_length=1, max_length=100)
+    email: Optional[EmailStr] = Field(None, example="jane.doe@example.com")
     mobile: Optional[str] = Field(None, pattern=r"^\d{10}$")
     address: Optional[str] = Field(None, min_length=5, max_length=255)
     city: Optional[str] = Field(None, min_length=1, max_length=50)
     state: Optional[str] = Field(None, min_length=1, max_length=50)
     pincode: Optional[str] = Field(None, pattern=r"^\d{6}$")
+
+    model_config = ConfigDict(str_strip_whitespace=True)
+
+
+class PasswordChangeRequest(BaseModel):
+    email: Optional[EmailStr] = Field(None, example="jane.doe@example.com")
+    oldPassword: str = Field(..., min_length=6, example="CurrentPassword123")
+    newPassword: str = Field(..., min_length=6, example="NewSecurePassword123")
 
     model_config = ConfigDict(str_strip_whitespace=True)
 

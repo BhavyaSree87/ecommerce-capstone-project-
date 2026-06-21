@@ -1,5 +1,6 @@
 import os
 from functools import lru_cache
+from pathlib import Path
 from pydantic_settings import BaseSettings
 
 
@@ -37,7 +38,7 @@ class Settings(BaseSettings):
     
     class Config:
         """Pydantic v2 configuration"""
-        env_file = ".env"
+        env_file = str(Path(__file__).resolve().parent.parent / ".env")
         case_sensitive = False
 
 

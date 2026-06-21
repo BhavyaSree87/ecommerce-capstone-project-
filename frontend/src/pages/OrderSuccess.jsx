@@ -16,7 +16,11 @@ export default function OrderSuccess() {
     );
   }
 
-  const deliveryAddress = order.shippingAddress || order.billingAddress;
+  const orderId = order.order_id || order.id;
+  const paymentMethod = order.paymentMethod || order.payment_method;
+  const totalAmount = order.total_amount || order.totals?.total || order.amount || 0;
+  const status = order.status || "Order Placed";
+  const deliveryAddress = order.shipping || order.billing || {};
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
@@ -31,20 +35,20 @@ export default function OrderSuccess() {
           <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
             <h2 className="text-lg font-semibold mb-4">Order Details</h2>
             <div className="space-y-3 text-slate-700">
-              <div><span className="font-semibold">Order ID:</span> {order.id}</div>
-              <div><span className="font-semibold">Payment:</span> {order.paymentMethod}</div>
-              <div><span className="font-semibold">Amount:</span> ₹{order.totals.total}</div>
-              <div><span className="font-semibold">Status:</span> {order.status}</div>
+              <div><span className="font-semibold">Order ID:</span> {orderId}</div>
+              <div><span className="font-semibold">Payment:</span> {paymentMethod}</div>
+              <div><span className="font-semibold">Amount:</span> ₹{totalAmount}</div>
+              <div><span className="font-semibold">Status:</span> {status}</div>
             </div>
           </div>
 
           <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
             <h2 className="text-lg font-semibold mb-4">Delivery Address</h2>
             <div className="text-slate-700 space-y-2 text-sm">
-              <div>{deliveryAddress.name}</div>
-              <div>{deliveryAddress.line1}</div>
-              <div>{deliveryAddress.city}, {deliveryAddress.state} {deliveryAddress.pincode}</div>
-              <div>{deliveryAddress.phone}</div>
+              <div>{deliveryAddress.name || deliveryAddress.fullName || "N/A"}</div>
+              <div>{deliveryAddress.line1 || deliveryAddress.addressLine1 || ""}</div>
+              <div>{deliveryAddress.city || ""}, {deliveryAddress.state || ""} {deliveryAddress.pincode || ""}</div>
+              <div>{deliveryAddress.phone || deliveryAddress.contact || ""}</div>
             </div>
           </div>
         </div>

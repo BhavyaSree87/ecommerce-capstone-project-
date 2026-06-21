@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 from fastapi.middleware.cors import CORSMiddleware
+from app.config import get_settings
+from app.logger import get_logger
 from app.routes.auth_routes import router as auth_router
 from app.routes import product_routes
 from app.routes import cart_routes
@@ -13,7 +15,6 @@ from app.routes import inventory_routes
 from app.routes import report_routes
 from app.routes import category_routes
 from app.routes import ai_routes
-from app.utils.auth_dependency import oauth2_scheme
 
 app = FastAPI(
     title="E-Commerce Platform API",
@@ -22,11 +23,38 @@ app = FastAPI(
 )
 
 
+def mask_secret(secret: str) -> str:
+    if not secret:
+        return "<missing>"
+    if len(secret) <= 8:
+        return "*" * len(secret)
+    return f"{secret[:4]}{'*' * (len(secret) - 8)}{secret[-4:]}"
+
+
+settings = get_settings()
+startup_logger = get_logger("startup")
+startup_logger.info(
+    "Loaded security settings: SECRET_KEY=%s ALGORITHM=%s ACCESS_TOKEN_EXPIRE_HOURS=%s",
+    mask_secret(settings.secret_key),
+    settings.algorithm,
+    settings.access_token_expire_hours
+)
+
 app.add_middleware(
     CORSMiddleware,
     # During local development allow all origins to avoid CORS friction from the dev server.
     # In production replace with explicit origins (do NOT use "*").
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5174",
+        "http://localhost:5176",
+        "http://127.0.0.1:5176",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ],
+
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -47,16 +75,6 @@ def custom_openapi():
     )
     
     openapi_schema["components"]["securitySchemes"] = {
-        "OAuth2PasswordBearer": {
-            "type": "oauth2",
-            "flows": {
-                "password": {
-                    "tokenUrl": "/api/auth/token",
-                    "scopes": {}
-                }
-            },
-            "description": "OAuth2 password flow for login - obtain a JWT access token"
-        },
         "BearerAuth": {
             "type": "http",
             "scheme": "bearer",
@@ -64,7 +82,7 @@ def custom_openapi():
             "description": "Use a JWT access token prefixed with Bearer"
         }
     }
-    openapi_schema["security"] = [{"OAuth2PasswordBearer": []}]
+    openapi_schema["security"] = [{"BearerAuth": []}]
 
     auth_paths = ["/api/auth/login", "/api/auth/register", "/api/auth/token"]
     for path in auth_paths:

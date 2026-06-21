@@ -1,6 +1,8 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, status
 from app.database.db import get_connection
 from app.utils.auth_dependency import current_user, admin_only
+from app.schemas.user_schema import UserUpdate, PasswordChangeRequest
+from app.utils.password import hash_password, verify_password
 
 router = APIRouter()
 
@@ -58,6 +60,69 @@ def get_user(user_id: int, user=Depends(current_user)):
         if not data:
             raise HTTPException(status_code=404, detail="User not found")
         return {"id": data[0], "name": data[1], "email": data[2], "role": data[3], "mobile": data[4], "address": data[5], "city": data[6], "state": data[7], "pincode": data[8]}
+    finally:
+        cursor.close()
+        conn.close()
+
+
+@router.put("/profile")
+def update_profile(payload: UserUpdate, user=Depends(current_user)):
+    update_data = payload.model_dump(exclude_none=True)
+    if not update_data:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="No profile fields provided")
+
+    allowed_fields = ["name", "email", "mobile", "address", "city", "state", "pincode"]
+    fields = [field for field in allowed_fields if field in update_data]
+    if not fields:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="No valid profile fields provided")
+
+    set_clause = ", ".join([f"{field.upper()} = :{field}" for field in fields])
+    params = {field: update_data[field] for field in fields}
+    params["id"] = user.get("user_id")
+
+    conn = get_connection()
+    cursor = conn.cursor()
+    try:
+        cursor.execute(f"UPDATE USERS SET {set_clause} WHERE ID = :id", params)
+        conn.commit()
+        cursor.execute("SELECT ID, NAME, EMAIL, ROLE, MOBILE, ADDRESS, CITY, STATE, PINCODE FROM USERS WHERE ID = :id", {"id": user.get("user_id")})
+        updated = cursor.fetchone()
+        return {
+            "id": updated[0],
+            "name": updated[1],
+            "email": updated[2],
+            "role": updated[3],
+            "mobile": updated[4],
+            "address": updated[5],
+            "city": updated[6],
+            "state": updated[7],
+            "pincode": updated[8],
+        }
+    finally:
+        cursor.close()
+        conn.close()
+
+
+@router.post("/change-password")
+def change_password(payload: PasswordChangeRequest, user=Depends(current_user)):
+    if payload.email and payload.email != user.get("email"):
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Email mismatch")
+
+    conn = get_connection()
+    cursor = conn.cursor()
+    try:
+        cursor.execute("SELECT PASSWORD FROM USERS WHERE ID = :id", {"id": user.get("user_id")})
+        row = cursor.fetchone()
+        if not row:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+        if not verify_password(payload.oldPassword, row[0]):
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Current password is incorrect")
+
+        hashed_password = hash_password(payload.newPassword)
+        cursor.execute("UPDATE USERS SET PASSWORD = :password WHERE ID = :id", {"password": hashed_password, "id": user.get("user_id")})
+        conn.commit()
+        return {"message": "Password updated successfully"}
     finally:
         cursor.close()
         conn.close()

@@ -5,6 +5,7 @@ import SimilarProducts from "../components/products/SimilarProducts";
 import Loader from "../components/common/Loader";
 import imageLoader from "../utils/imageLoader";
 import axios from "axios";
+import { API_BASE_URL } from "../services/config";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -68,7 +69,7 @@ export default function ProductDetails() {
     setDescriptionLoading(true);
 
     const response = await axios.post(
-      "http://127.0.0.1:8000/api/ai/generate-description",
+      `${API_BASE_URL}/api/ai/generate-description`,
       {
         product_name: product.name,
         category: product.category,

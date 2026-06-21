@@ -1,9 +1,8 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+import { API_BASE_URL } from "./config";
+import { getToken } from "./authService";
 
 const getAuthHeaders = () => {
-  const session = localStorage.getItem("ecom_auth_session");
-  const tokenFromSession = session ? JSON.parse(session).token : null;
-  const token = tokenFromSession || localStorage.getItem("ecom_jwt_token") || localStorage.getItem("token");
+  const token = getToken();
 
   if (!token) {
     return { "Content-Type": "application/json" };

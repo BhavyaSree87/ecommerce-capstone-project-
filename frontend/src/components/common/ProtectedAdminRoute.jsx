@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import Loader from './Loader';
+import { getToken, getRole } from '../../services/authService';
 
 export default function ProtectedAdminRoute({ children }) {
   const { isAuthenticated, authLoading, role } = useContext(AuthContext);
-  const storedRole = localStorage.getItem('role')?.toLowerCase();
-  const storedToken = localStorage.getItem('token');
+  const storedRole = getRole();
+  const storedToken = getToken();
   const isAdminLocal = !!storedToken && storedRole === 'admin';
 
   console.log(

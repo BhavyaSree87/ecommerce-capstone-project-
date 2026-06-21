@@ -11,6 +11,13 @@ def register_user(user: UserRegister) -> Tuple[Optional[Tuple], Optional[Dict]]:
     conn = get_connection()
     cursor = conn.cursor()
     try:
+        # Debug: log the parameters that will be used for insertion (do not log raw password)
+        try:
+            logger = __import__('app.logger', fromlist=['get_logger']).get_logger('auth_service')
+            logger.debug("register_user called with email=%s name=%s mobile=%s city=%s state=%s pincode=%s",
+                         user.email, user.name, user.mobile, user.city, user.state, user.pincode)
+        except Exception:
+            pass
         # Check duplicate email
         cursor.execute("SELECT COUNT(1) FROM USERS WHERE EMAIL = :email", {"email": user.email})
         if cursor.fetchone()[0] > 0:
@@ -18,7 +25,8 @@ def register_user(user: UserRegister) -> Tuple[Optional[Tuple], Optional[Dict]]:
 
         hashed_password = None
         # Hashing should be done by caller to avoid circular imports; caller can pass hashed password if needed.
-        cursor.execute(
+        try:
+            cursor.execute(
             """
             INSERT INTO USERS (ID, NAME, EMAIL, PASSWORD, ROLE, MOBILE, ADDRESS, CITY, STATE, PINCODE)
             VALUES (USER_SEQ.NEXTVAL, :name, :email, :password, :role, :mobile, :address, :city, :state, :pincode)
@@ -34,8 +42,18 @@ def register_user(user: UserRegister) -> Tuple[Optional[Tuple], Optional[Dict]]:
                 "state": user.state,
                 "pincode": user.pincode,
             },
-        )
-        conn.commit()
+            )
+            conn.commit()
+        except Exception as exc:
+            # Log SQL parameters and traceback for debugging
+            try:
+                import traceback
+                tb = traceback.format_exc()
+                logger = __import__('app.logger', fromlist=['get_logger']).get_logger('auth_service')
+                logger.error("Error executing INSERT for user %s: %s\nTraceback:\n%s", user.email, exc, tb)
+            except Exception:
+                pass
+            raise
 
         # Fetch the newly created user (select commonly used fields)
         cursor.execute(

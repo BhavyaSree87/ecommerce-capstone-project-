@@ -4,6 +4,7 @@ import { ShopContext } from "../context/ShopContext";
 import imageLoader from "../utils/imageLoader";
 import productPlaceholder from "../assets/images/product-placeholder.svg";
 import axios from "axios";
+import { API_BASE_URL } from "../services/config";
 
 export default function SearchResults() {
   const { filteredProducts, searchQuery, loading, clearFilters } = useContext(ShopContext);
@@ -14,7 +15,7 @@ export default function SearchResults() {
       setSearchLoading(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/ai/product-search",
+        `${API_BASE_URL}/api/ai/product-search`,
         {
           query: searchQuery || "clothing"
         }

@@ -1,0 +1,11 @@
+# Requirements pinned to versions observed working in server venv (venv312)
+fastapi==0.138.0
+pydantic==2.13.4
+pydantic-settings==2.14.2
+passlib==1.7.4
+bcrypt==3.2.2
+razorpay==2.0.1
+oracledb
+uvicorn
+python-dotenv
+requests

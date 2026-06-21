@@ -3,11 +3,12 @@ import { Navigate } from 'react-router-dom';
 import AdminSidebar from './components/AdminSidebar';
 import { AuthContext } from '../context/AuthContext';
 import Loader from '../components/common/Loader';
+import { getToken, getRole } from '../services/authService';
 
 export default function AdminLayout({ children }) {
   const { isAuthenticated, authLoading, role } = useContext(AuthContext);
-  const storedRole = window.localStorage.getItem('role')?.toLowerCase() || window.localStorage.getItem('ecom_user_role')?.toLowerCase();
-  const storedToken = window.localStorage.getItem('token') || window.localStorage.getItem('ecom_jwt_token');
+  const storedRole = getRole();
+  const storedToken = getToken();
   const effectiveRole = role?.toLowerCase() || storedRole;
 
   console.log(

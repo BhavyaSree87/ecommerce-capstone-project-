@@ -91,3 +91,69 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
+## DevOps / CI-CD
+
+This project includes a production-ready CI/CD pipeline and Docker compose orchestration.
+
+### Files added/updated
+- `Jenkinsfile` — Declarative Jenkins pipeline implementing the full build and deploy stages.
+- `docker-compose.yml` — Enhanced compose file with `env_file` support, `healthcheck`, restart policy and custom network.
+- `backend/.dockerignore` — Excludes virtualenvs, logs, and python build artifacts.
+- `frontend/.dockerignore` — Excludes `node_modules`, `dist` and `.env`.
+- `.env.example` — Example environment file with Oracle DB and JWT variables.
+
+### Docker commands
+- Build images and services:
+
+```bash
+docker compose build
+```
+
+- Run services in background:
+
+```bash
+docker compose up -d
+```
+
+- Stop and remove services:
+
+```bash
+docker compose down
+```
+
+### Jenkins setup
+1. Install Jenkins (with Docker and Node + Python tool available on the agent) and configure a node/agent with Docker privileges.
+2. Place the repository in Jenkins and create a pipeline job using the repository's `Jenkinsfile`.
+3. Ensure the agent has `docker`, `docker-compose`, `node` and `python3` installed.
+4. Configure credentials and notification hooks (email/Slack) in your Jenkins instance and update the `post` sections in the `Jenkinsfile` to call them.
+
+### Pipeline overview
+Stages implemented (in `Jenkinsfile`):
+1. Checkout Source Code
+2. Install Backend Dependencies (Python venv + pip)
+3. Install Frontend Dependencies (npm ci)
+4. Run Backend Tests (if present)
+5. Build Frontend (`npm run build`)
+6. Build Backend Docker Image
+7. Build Frontend Docker Image
+8. Run `docker compose up -d --build`
+9. Verify Backend Health (curl /docs)
+10. Verify Frontend Health (curl /)
+11. Deployment Success
+
+The pipeline will always run `docker compose down` in the `post` step to ensure clean state.
+
+### Troubleshooting
+- If `docker compose up` fails, run the compose with `--verbose` to see detailed logs.
+- If health checks fail, try `docker compose logs backend` and `docker compose logs frontend` to inspect logs.
+- Ensure the `.env` file exists and contains the real secrets (copy from `.env.example`).
+- For Jenkins agent issues, ensure the agent user has permission to run Docker commands (often requires adding user to `docker` group on Linux).
+
+### Notes & recommendations
+- The current `backend/Dockerfile` starts `uvicorn` on port `8000` and is suitable for production behind a reverse proxy. Consider using Gunicorn with Uvicorn workers for heavy loads.
+- The current `frontend/Dockerfile` runs the Vite dev server. For a true production image, build static assets (`npm run build`) and serve them with `nginx` or use `vite preview` on a controlled port.
+- Never commit real secrets. Use `.env` and secret stores (Vault, Jenkins credentials, or cloud secrets manager) for production.
+
+***
+

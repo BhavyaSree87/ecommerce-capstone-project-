@@ -1,9 +1,11 @@
+import { API_PREFIX } from "./config";
+
 const USERS_KEY = "ecom_users";
 const SESSION_KEY = "ecom_auth_session";
 const TOKEN_KEY = "ecom_jwt_token";
 const ROLE_KEY = "ecom_user_role";
 
-const API_BASE_URL = "http://localhost:8000/api";
+const API_BASE_URL = API_PREFIX; // API_PREFIX includes the /api path, e.g., http://127.0.0.1:8000/api
 
 const parseStorage = (key) => {
   try {
@@ -108,7 +110,9 @@ export const register = async ({
 
     // Store JWT token and role
     saveStorage(TOKEN_KEY, data.access_token);
+    window.localStorage.setItem('token', data.access_token);
     saveStorage(ROLE_KEY, normalizeRole(data.user?.role || "user"));
+    window.localStorage.setItem('role', normalizeRole(data.user?.role || "user"));
     saveStorage(SESSION_KEY, { token: data.access_token, user: data.user });
 
     return { user: data.user, token: data.access_token };
@@ -157,22 +161,39 @@ export const login = async ({ email, password }) => {
 export const logout = async () => {
   window.localStorage.removeItem(SESSION_KEY);
   window.localStorage.removeItem(TOKEN_KEY);
+  window.localStorage.removeItem("token");
   window.localStorage.removeItem(ROLE_KEY);
+  window.localStorage.removeItem("role");
   console.log("[AUTH SERVICE] Logout successful - cleared all tokens and role");
 };
 
 export const loadSession = () => {
-  const session = parseStorage(SESSION_KEY);
-  const token = parseStorage(TOKEN_KEY);
-  const role = parseStorage(ROLE_KEY);
-  
+  let session = parseStorage(SESSION_KEY);
+  let token = parseStorage(TOKEN_KEY);
+  let role = parseStorage(ROLE_KEY);
+
+  if (!session && token) {
+    session = { token, user: { role } };
+  }
+
+  if (!token && session?.token) {
+    token = session.token;
+  }
+
+  if (!role) {
+    role = parseStorage("role");
+  }
+
   console.log("[AUTH SERVICE] Loading session - token exists:", !!token, "role:", role);
-  
-  // If session exists, add role to user object
+
   if (session && session.user && role) {
     session.user.role = role;
   }
-  
+
+  if (token && !session) {
+    session = { token, user: { role } };
+  }
+
   return session;
 };
 
@@ -183,7 +204,7 @@ export const updateProfile = async (updatedProfile) => {
       throw new Error("No authentication token found");
     }
 
-    const response = await fetch(`${API_BASE_URL}/user/profile`, {
+    const response = await fetch(`${API_BASE_URL}/users/profile`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -215,7 +236,7 @@ export const changePassword = async ({ email, oldPassword, newPassword }) => {
       throw new Error("No authentication token found");
     }
 
-    const response = await fetch(`${API_BASE_URL}/user/change-password`, {
+    const response = await fetch(`${API_BASE_URL}/users/change-password`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -246,7 +267,7 @@ export const saveSession = (user, token) => {
 };
 
 export const getToken = () => {
-  return parseStorage(TOKEN_KEY);
+  return parseStorage(TOKEN_KEY) || window.localStorage.getItem('token') || null;
 };
 
 export const getRole = () => {

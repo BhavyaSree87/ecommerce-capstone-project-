@@ -14,18 +14,18 @@ def get_inventory_by_product_id(cursor, product_id: int):
 
 
 def create_inventory(cursor, product_id: int, available_stock: int, reserved_stock: int = 0, last_updated: datetime = None):
-    if last_updated is None:
-        last_updated = datetime.utcnow()
-
-    cursor.execute(
-        
-        {
-            "product_id": product_id,
-            "available_stock": available_stock,
-            "reserved_stock": reserved_stock,
-            "last_updated": last_updated,
-        },
-    )
+    """Insert an inventory record for a product. Uses INVENTORY_SEQ for INVENTORY_ID and SYSDATE for LAST_UPDATED."""
+    # Oracle SYSDATE is used for LAST_UPDATED to avoid binding datetime conversions
+    sql = """
+    INSERT INTO INVENTORY (INVENTORY_ID, PRODUCT_ID, AVAILABLE_STOCK, RESERVED_STOCK, LAST_UPDATED)
+    VALUES (INVENTORY_SEQ.NEXTVAL, :product_id, :available_stock, :reserved_stock, SYSDATE)
+    """
+    params = {
+        "product_id": product_id,
+        "available_stock": available_stock,
+        "reserved_stock": reserved_stock,
+    }
+    cursor.execute(sql, params)
 
 
 def update_inventory(cursor, product_id: int, available_stock: int = None, reserved_stock: int = None, last_updated: datetime = None):

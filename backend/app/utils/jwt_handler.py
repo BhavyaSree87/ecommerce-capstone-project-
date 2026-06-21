@@ -1,6 +1,6 @@
-from jose import jwt, JWTError
 from datetime import datetime, timedelta, timezone
 from typing import Dict, Optional
+from jose import jwt, JWTError, ExpiredSignatureError
 from app.config import get_settings
 from app.logger import get_logger
 
@@ -62,6 +62,9 @@ def verify_token(token: str) -> Dict:
         )
         logger.debug(f"JWT token verified successfully for user: {payload.get('user_id')}")
         return payload
+    except ExpiredSignatureError as e:
+        logger.warning(f"JWT verification failed - expired token: {e}")
+        raise
     except JWTError as e:
         logger.warning(f"JWT verification failed: {e}")
         raise
