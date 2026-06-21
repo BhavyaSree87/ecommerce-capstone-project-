@@ -21,8 +21,6 @@ services:
       - JWT_SECRET
       - ACCESS_TOKEN_EXPIRE_HOURS
     restart: unless-stopped
-    depends_on:
-      - frontend
     networks:
       - ecommerce_net
     healthcheck:
