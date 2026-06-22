@@ -18,7 +18,7 @@ pipeline {
 		stage('Install Backend Dependencies') {
 			steps {
 				dir("${BACKEND_DIR}") {
-					sh '''
+					bat '''
 					python3 -m venv .venv || python -m venv .venv
 					. .venv/bin/activate
 					pip install --upgrade pip setuptools wheel
@@ -31,7 +31,7 @@ pipeline {
 		stage('Install Frontend Dependencies') {
 			steps {
 				dir("${FRONTEND_DIR}") {
-					sh '''
+					bat '''
 					npm ci
 					'''
 				}
@@ -41,7 +41,7 @@ pipeline {
 		stage('Run Backend Tests') {
 			steps {
 				dir("${BACKEND_DIR}") {
-					sh '''
+					bat '''
 					. .venv/bin/activate
 					if [ -f pytest.ini ] || ls test*/ | grep -q .; then
 						pytest -q || true
@@ -56,7 +56,7 @@ pipeline {
 		stage('Build Frontend') {
 			steps {
 				dir("${FRONTEND_DIR}") {
-					sh '''
+					bat '''
 					npm run build
 					'''
 				}
@@ -65,19 +65,19 @@ pipeline {
 
 		stage('Build Backend Docker Image') {
 			steps {
-				sh "docker build -t ${BACKEND_IMAGE} ./backend"
+				bat "docker build -t ${BACKEND_IMAGE} ./backend"
 			}
 		}
 
 		stage('Build Frontend Docker Image') {
 			steps {
-				sh "docker build -t ${FRONTEND_IMAGE} ./frontend"
+				bat "docker build -t ${FRONTEND_IMAGE} ./frontend"
 			}
 		}
 
 		stage('Run Docker Compose') {
 			steps {
-				sh '''
+				bat '''
 				docker compose up -d --build
 				'''
 			}
@@ -85,7 +85,7 @@ pipeline {
 
 		stage('Verify Backend Health') {
 			steps {
-				sh '''
+				bat '''
 				echo "Waiting for backend..."
 				retries=12
 				until curl -fsS http://localhost:8000/docs || [ $retries -le 0 ]; do
@@ -100,7 +100,7 @@ pipeline {
 
 		stage('Verify Frontend Health') {
 			steps {
-				sh '''
+				bat '''
 				echo "Waiting for frontend..."
 				retries=12
 				until curl -fsS http://localhost:5173 || [ $retries -le 0 ]; do
@@ -129,7 +129,7 @@ pipeline {
 		}
 		always {
 			echo 'Cleaning up docker compose'
-			sh 'docker compose down --remove-orphans || true'
+			bat 'docker compose down --remove-orphans || true'
 		}
 	}
 }
